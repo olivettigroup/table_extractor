@@ -34,151 +34,108 @@ import traceback
 
 @logged
 class TableExtractor(object):
-    def __init__(self, db, collection = 'papers', domain_name ='zeolites'):
+    def __init__(self, domain_name ='zeolites'):
         self.db = db
-        self.connection = MongoClient()
         self.nlp = spacy.load('en')
         self.class_compression = ([0, 1, 1, 1, 1, 2, 2, 3, 1, 1, 1, 0, 0, 0, 2, 4, 1, 0, 1, 1, 0, 0])
-        self.collection = collection
         self.load_embeddings()
-        self.__log.info( self.__class__.__name__ + ' initialized')
         self.load_units()
         self.unit_regex = re.compile('\(.*?\)')
         self.load_composition_elements(domain_name)
 
-    def extract_and_save_all_tables(self, path_to_dois = 'data/table_data/zeo_dois.txt', dois = None,
-                                     overwrite=True, train_model=False,
-                                      tables_collection_name = None):
-        # ****** Production Version *******
-        if train_model:
-            self.load_word_labels()
-            words, labels = self.load_word_labels()
-            labels = self.compress_classes(labels)
-            words, labels = self.vectorize_words(words, labels)
-            self.split_train_test(words, labels)
-            self.train_word_classifier()
+    # files- list of file locations to either html or xml files 
+    # dois- list of dois that match the order of the files
+    def extract_and_save_all_tables(self, files = None, dois = None):
         with open('bin/word_classifier.pkl', 'rb') as f:
             self.clf = pickle.load(f)
-
-        if not tables_collection_name:
-            self.table_collection_name = self.domain_name 
-        else:
-            self.table_collection_name = tables_collection_name
-        client = MongoClient()
-        client.predsynth[self.table_collection_name].drop()
-        
-        if not dois:
-            dois = []
-            file = open(path_to_dois, 'r')
-            for line in file:
-                dois.append(line.strip())
-        success = 0
-        self.fails = 0
-        permission = 0
-        self.values = 0
-        meta = 0
-        no_file = 0
-        self.other = 0
-        self.update = 0
-        num_prob = 0
-        for num, doi in enumerate(dois):
-            paper = client.predsynth.paper_metadata.find_one({"doi":doi})
-            if paper is not None:
-                self.doi = paper['doi']
-                tab = []
-                if paper['have_html']:
-                    html = paper['html_path']
-                    self.__log.info( "EXTRACT HTML: Extracting tables from paper #" + str(num) + ": " + str(doi) )
-                    try:
-                        problem = False
-                        print(num, self.doi)
-                        tables, captions, footers, capt_refs, table_refs = self.get_tables(html)
-                        cols, rows, col_inds, row_inds = self.get_headers(tables)
-                        pred_cols, pred_rows = self.classify_table_headers(cols, rows)
-                        orients = []
-                        composition_flags = []
-                        for pred_col, pred_row, col, row in zip(pred_cols, pred_rows, cols, rows):
-                            orient, composition_flag  = self.determine_table_orientation(pred_col, pred_row, col, row)
-                            orients.append(orient)
-                            composition_flags.append(composition_flag)
-                        tab = []
-                        for table, row_ind, col_ind, orient, table_ref in zip(tables, row_inds, col_inds, orients, table_refs):
-                            tab.append(self.construct_table_object(orient, table, row_ind, col_ind, table_ref))    
-                        for i, (t, comp_flag, caption, footer, ref) in enumerate(zip(tab,composition_flags, captions, footers, capt_refs)):
-                            if t is not None:
-                                t['order'] = i
-                                t['_id'] = ObjectId()
-                                t['paper_doi'] = self.doi
-                                t['composition_table'] = comp_flag
-                                t['caption'] = caption
-                                if ref is not None:
-                                    t['caption_ref'] = ref
-                                if footer is not None:
-                                    t['footer'] = footer
-                                if comp_flag:
-                                    t = self.clean_composition_table(t, remaining = self.remaining)
-                                try:
-                                    self.connection[self.db][self.table_collection_name].insert_one(t)
-                                except:
-                                    print('Save table issue')
-                        success+=1
-                    except IOError as e:
-                        self.__log.info( "FAILURE: No permission to read HTML, DOI:" + str(self.doi) )
-                        permission+=1
-                elif paper['have_xml']:
-                    xml = paper['xml_path']
-                    self.__log.info( "EXTRACT XML: Extracting tables from paper #" + str(num) + ": " + str(doi) )
+        if files is None:
+            print('Need to provide list of files')
+        if dois is None:
+            print('Need to provide list of dois for files')
+        all_tables = []
+        failures = 0
+        for num, (doi, f) in enumerate(zip(dois, files)):
+            tab = []
+            self.doi = doi
+            if 'html' in f:
+                print('Extracting Tables (HTML) from: ', doi)
+                try:
+                    problem = False
+                    tables, captions, footers, capt_refs, table_refs = self.get_tables(f)
+                    cols, rows, col_inds, row_inds = self.get_headers(tables)
+                    pred_cols, pred_rows = self.classify_table_headers(cols, rows)
+                    orients = []
+                    composition_flags = []
+                    for pred_col, pred_row, col, row in zip(pred_cols, pred_rows, cols, rows):
+                        orient, composition_flag  = self.determine_table_orientation(pred_col, pred_row, col, row)
+                        orients.append(orient)
+                        composition_flags.append(composition_flag)
+                    tab = []
+                    for table, row_ind, col_ind, orient, table_ref in zip(tables, row_inds, col_inds, orients, table_refs):
+                        tab.append(self.construct_table_object(orient, table, row_ind, col_ind, table_ref))    
+                    for i, (t, comp_flag, caption, footer, ref) in enumerate(zip(tab,composition_flags, captions, footers, capt_refs)):
+                        if t is not None:
+                            t['order'] = i
+                            t['_id'] = ObjectId()
+                            t['paper_doi'] = self.doi
+                            t['composition_table'] = comp_flag
+                            t['caption'] = caption
+                            if ref is not None:
+                                t['caption_ref'] = ref
+                            if footer is not None:
+                                t['footer'] = footer
                             if comp_flag:
                                 t = self.clean_composition_table(t, remaining = self.remaining)
-                    try:
-                        print(num, self.doi)
-                        tables, captions, footers, table_refs, capt_refs = self.get_xml_tables(xml)
-                        cols, rows, col_inds, row_inds = self.get_headers(tables)
-                        pred_cols, pred_rows = self.classify_table_headers(cols, rows)
-                        orients = []
-                        composition_flags = []
-                        for pred_col, pred_row, col, row in zip(pred_cols, pred_rows, cols, rows):
-                            orient, composition_flag = self.determine_table_orientation(pred_col, pred_row, col, row)
-                            orients.append(orient)
-                            composition_flags.append(composition_flag)
-                        tab = []
-                        for table, row_ind, col_ind, orient, ref in zip(tables, row_inds, col_inds, orients, table_refs):
-                            try:
-                                curr = (self.construct_table_object(orient, table, row_ind, col_ind, ref))
-                                tab.append(curr)
-                            except IndexError as e:
-                                fails+=1
-                                self.__log.info( "FAILURE: Index, Failed to extract table #" + str(tables.index(table)) + " from paper " + str(self.doi) )
-                        for i, (t, comp_flag, caption, footer, capt_ref) in enumerate(zip(tab,composition_flags, captions, footers, capt_refs)):
-                            if t is not None:
-                                t['order'] = i
-                                t['_id'] = ObjectId()
-                                t['caption'] = caption
-                                t['paper_doi'] = self.doi
-                                t['composition_table'] = comp_flag
-                                if capt_ref is not None:
-                                    t['caption_ref'] = capt_ref
-                                if footer is not None:
-                                    t['footer'] = footer
-                                if comp_flag:
-                                    t = self.clean_composition_table(t, remaining = self.remaining)
-                                try:
-                                    self.connection[self.db][self.table_collection_name].insert_one(t)
-                                except:
-                                    print('Save XML issue')
-                        success+=1
-                    except IndexError as e:
-                        print('FAILURE: XML index error')
-                else:
-                    no_file+=1
-                    self.__log.info( "FAILURE: No HTML or XML paper #" + str(num) + ": " + str(doi) )
+                            all_tables.append(t)
+                            print('Success: Extracted Tables from ', doi)
+                except IOError as e:
+                    print('Failure: No permission to read, DOI:', doi)
+                    failures += 1
+            elif 'xml' in f:
+                print('Extracting Tables (XML) from ', doi)
+                try:
+                    tables, captions, footers, table_refs, capt_refs = self.get_xml_tables(f)
+                    cols, rows, col_inds, row_inds = self.get_headers(tables)
+                    pred_cols, pred_rows = self.classify_table_headers(cols, rows)
+                    orients = []
+                    composition_flags = []
+                    for pred_col, pred_row, col, row in zip(pred_cols, pred_rows, cols, rows):
+                        orient, composition_flag = self.determine_table_orientation(pred_col, pred_row, col, row)
+                        orients.append(orient)
+                        composition_flags.append(composition_flag)
+                    tab = []
+                    for table, row_ind, col_ind, orient, ref in zip(tables, row_inds, col_inds, orients, table_refs):
+                        try:
+                            curr = (self.construct_table_object(orient, table, row_ind, col_ind, ref))
+                            tab.append(curr)
+                        except IndexError as e:
+                            print('Failure:', doi)
+                            failure += 1      
+                    for i, (t, comp_flag, caption, footer, capt_ref) in enumerate(zip(tab,composition_flags, captions, footers, capt_refs)):
+                        if t is not None:
+                            t['order'] = i
+                            t['_id'] = ObjectId()
+                            t['caption'] = caption
+                            t['paper_doi'] = self.doi
+                            t['composition_table'] = comp_flag
+                            if capt_ref is not None:
+                                t['caption_ref'] = capt_ref
+                            if footer is not None:
+                                t['footer'] = footer
+                            if comp_flag:
+                                t = self.clean_composition_table(t, remaining = self.remaining)
+                            all_tables.append(t)
+                            print('Success: Extracted Tables from', doi)
+                except IndexError as e:
+                    print('FAILURE: XML index error', doi)
+                    failures += 1
             else:
-                meta+=1
-                self.__log.info( "FAILURE: No metadata entry paper #" + str(num) + ": " + str(doi) )
-        print(success, self.fails, self.values, permission, meta, no_file, self.other, self.update, num_prob)
-        self.__log.info( "SUCCESS: Extracted and Saved all papers" )
-        self.__log.info( "STATS: Successful:" + str(success) + " IndexFailure:" + str(self.fails) + " ParsingFailure:" + str(self.values) + " No Permission:" + str(permission) + " No Metadata:" + str(meta) + " No File:" + str(no_file) + "Failed Update:" + str(self.update) )
-
+                print('Failure: File needs to be html or xml')
+                failures += 1
+        print('Finished Extracting all Papers')
+        print('Number Attempted:', len(files))
+        print('Number Successful:', len(all_tables))
+        print('Number Failed:', failures)
     def get_caption(self, table, format):
         if format == 'html':
             if '10.1016' in self.doi:
@@ -846,9 +803,14 @@ class TableExtractor(object):
                 all_row_headers.append(trans[row_ind])
         return all_col_headers, all_row_headers, all_col_indexes, all_row_indexes
 
-    def load_embeddings(self, file_loc='bin/fasttext_embeddings-MINIFIED.model'):
-        self.embeddings = keyedvectors.KeyedVectors.load(file_loc)
-        self.embeddings.bucket = 2000000
+    def load_embeddings(self, file_loc=None):
+        if file_loc == None:
+            print('Need to specify path to word embedding model')
+            print('Materials science training word2vec and fasttext are available for download')
+            print('Check the read-me')
+        else:
+            self.embeddings = keyedvectors.KeyedVectors.load(file_loc)
+            self.embeddings.bucket = 2000000
 
     def load_word_labels(self):
         all_annotated = []
@@ -1167,7 +1129,8 @@ class TableExtractor(object):
                     '°', '°C', 'F', 'degC',
                     'ppm']
     
-    def load_composition_elements(self, domain):
+    def load_composition_elements(self, domain=None):
+        # Compositional elements to help in correclty identifiying the orientation of tables in specific domains
         if domain == 'geopolymers':
             self.material_constituents = ['Al2O3', 'SiO2']
             self.constituent_threshold = 2
