@@ -1,14 +1,6 @@
-#!/usr/bin/env python
-#-*- coding: utf-8
-
-import sys, os
-sys.path = [os.path.abspath(os.path.dirname(__file__))] + sys.path
-sys.path.append("..")
-sys.path.append(".")
 import traceback
 from json import loads, dumps
 import pprint as pp
-from pymongo import MongoClient
 import pandas as pd
 import pickle
 from bs4 import BeautifulSoup
@@ -16,9 +8,6 @@ import spacy
 from spacy.tokens import Doc
 import re
 from gensim.models import KeyedVectors
-from gensim.models import keyedvectors
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import f1_score, accuracy_score, classification_report
 import numpy as np
 from unidecode import unidecode_expect_nonascii
 import unidecode
@@ -29,15 +18,13 @@ from table import (Table, Entity, Attribute, Link)
 from bson.objectid import (ObjectId)
 from autologging import (logged)
 from html.parser import HTMLParser
-import lxml.etree as etree
 import traceback
 
 @logged
 class TableExtractor(object):
-    def __init__(self, domain_name ='zeolites'):
+    def __init__(self, domain_name = None):
         self.db = db
         self.nlp = spacy.load('en')
-        self.class_compression = ([0, 1, 1, 1, 1, 2, 2, 3, 1, 1, 1, 0, 0, 0, 2, 4, 1, 0, 1, 1, 0, 0])
         self.load_embeddings()
         self.load_units()
         self.unit_regex = re.compile('\(.*?\)')
@@ -812,43 +799,6 @@ class TableExtractor(object):
             self.embeddings = keyedvectors.KeyedVectors.load(file_loc)
             self.embeddings.bucket = 2000000
 
-    def load_word_labels(self):
-        all_annotated = []
-        sentence_labels = []
-        sentences = []
-        client = MongoClient()
-        with open('data/table_data/all_dois.txt', 'r') as f:
-          annotated_dois = f.read().splitlines()
-        for filename in os.listdir('../../paper-annotation/annotations/annotated'):
-            if filename[-5:] == '.json':
-                all_annotated.append(loads(open(os.path.join('../../paper-annotation/annotations/annotated', filename), 'r').read()))
-        annotated_papers = [p for p in all_annotated if p['doi'] in annotated_dois and p['annotator'] == 'annotator']
-        for i, ann_paper in enumerate(annotated_papers):
-            for para in ann_paper['paragraphs']:
-                for sent_toks, sent_labels in zip(para['tokens'], para['token_labels']):
-                    if any([l != 0 for l in sent_labels]):
-                        sentence_labels.append(sent_labels)
-                        sentences.append(sent_toks)
-        words = []
-        labels = []
-        for sent, lab in zip(sentences, sentence_labels):
-            words.extend(s.lower() for s in sent)
-            labels.extend(lab)
-        words = [self._normalize_string(w) for w in words]
-    
-        spacy_doc = Doc(self.nlp.vocab, words=words)
-        self.nlp.tagger(spacy_doc)
-        self.nlp.parser(spacy_doc)
-        self.nlp.entity(spacy_doc)
-        spacy_tokens = spacy_doc
-        return spacy_tokens, labels
-    
-    def compress_classes(self, labels):
-        new_labels = []
-        for l in labels:
-            new_labels.append(self.class_compression[l])
-        return new_labels
-
     def _normalize_string(self, string):
         ret_string = ''
         for char in string:
@@ -870,25 +820,6 @@ class TableExtractor(object):
                 label_vector.append(label)
                 emb_vector.append(np.zeros(100, dtype=np.float32))
         return emb_vector, label_vector
-
-    def split_train_test(self, words, labels):
-        train_words, test_words, train_labels, test_labels = train_test_split(words, labels, test_size=0.3, shuffle=True, stratify=labels)
-        self.train_X = train_words
-        self.train_Y = train_labels
-        self.test_X = test_words
-        self.test_Y = test_labels
-
-    def train_word_classifier(self):
-        labels = range(len(np.unique(self.class_compression)))
-        clf = MLPClassifier(activation='relu')
-        clf.fit(self.train_X, self.train_Y)
-        predictions = clf.predict(self.test_X)
-        f1_scores = f1_score(self.test_Y, predictions, average=None, labels=labels)
-        self.__log.info( "Word Classifier F1 Scores:" )
-        for i in range(len(f1_scores)):
-            self.__log.info( "Class:"+ str(i) + " " + str(round(f1_scores[i], 3)) )
-        with open('bin/word_classifier.pkl', 'wb') as f:
-            pickle.dump(clf, f)
 
     def classify_table_headers(self, cols, rows):
         vect_cols = []
