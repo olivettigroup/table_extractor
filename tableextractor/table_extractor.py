@@ -11,7 +11,6 @@ from gensim.models import KeyedVectors
 import numpy as np
 from unidecode import unidecode_expect_nonascii
 import unidecode
-from sklearn.neural_network import MLPClassifier
 from sklearn.externals import joblib
 from scipy import stats
 from table import (Table, Entity, Attribute, Link)

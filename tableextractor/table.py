@@ -38,7 +38,7 @@ class Document(dict):
 
         return dict.__setitem__(self, key, value)
 
-        
+   
 class Link(Document):
     structure = dict({
         'name':(str, None),
