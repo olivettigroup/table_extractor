@@ -19,7 +19,6 @@ from autologging import (logged)
 from html.parser import HTMLParser
 import traceback
 
-@logged
 class TableExtractor(object):
     def __init__(self, domain_name = None):
         self.db = db
