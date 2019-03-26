@@ -33,7 +33,7 @@ class TableExtractor(object):
     # files- list of file locations to either html or xml files 
     # dois- list of dois that match the order of the files
     def extract_and_save_all_tables(self, files = None, dois = None):
-        with open('bin/word_classifier.pkl', 'rb') as f:
+        with open('bin/word_classifier_python3.pkl', 'rb') as f:
             self.clf = pickle.load(f)
         if files is None:
             print('Need to provide list of files')
