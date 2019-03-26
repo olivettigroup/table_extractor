@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+#-*- coding: utf-8
+
 import traceback
 from json import loads, dumps
 import pprint as pp
