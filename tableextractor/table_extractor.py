@@ -23,9 +23,9 @@ from html.parser import HTMLParser
 import traceback
 
 class TableExtractor(object):
-    def __init__(self, domain_name = None):
+    def __init__(self, domain_name = None, embedding_loc = 'bin/fasttext_embeddings-MINIFIED.model'):
         self.nlp = spacy.load('en')
-        self.load_embeddings()
+        self.load_embeddings(file_loc = embedding_loc)
         self.load_units()
         self.unit_regex = re.compile('\(.*?\)')
         self.load_composition_elements(domain_name)
