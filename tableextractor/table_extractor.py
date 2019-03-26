@@ -21,7 +21,6 @@ import traceback
 
 class TableExtractor(object):
     def __init__(self, domain_name = None):
-        self.db = db
         self.nlp = spacy.load('en')
         self.load_embeddings()
         self.load_units()
@@ -121,6 +120,7 @@ class TableExtractor(object):
         print('Number Attempted:', len(files))
         print('Number Successful:', len(all_tables))
         print('Number Failed:', failures)
+        return all_tables
     def get_caption(self, table, format):
         if format == 'html':
             if '10.1016' in self.doi:
