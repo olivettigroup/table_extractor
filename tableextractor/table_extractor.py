@@ -517,6 +517,7 @@ class TableExtractor(object):
         all_caption_ref = []
         try:
             soup = BeautifulSoup(open(('data/'+html), 'r+'), 'html.parser')
+            print(soup)
         except UnicodeDecodeError:
             soup = BeautifulSoup(open('data/'+html, 'rt', encoding = 'latin1'), 'html.parser')
         tables = soup.find_all('table')
