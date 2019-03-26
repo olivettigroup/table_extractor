@@ -46,38 +46,38 @@ class TableExtractor(object):
             self.doi = doi
             if 'html' in f:
                 print('Extracting Tables (HTML) from: ', doi)
-                try:
-                    problem = False
-                    tables, captions, footers, capt_refs, table_refs = self.get_tables(f)
-                    cols, rows, col_inds, row_inds = self.get_headers(tables)
-                    pred_cols, pred_rows = self.classify_table_headers(cols, rows)
-                    orients = []
-                    composition_flags = []
-                    for pred_col, pred_row, col, row in zip(pred_cols, pred_rows, cols, rows):
-                        orient, composition_flag  = self.determine_table_orientation(pred_col, pred_row, col, row)
-                        orients.append(orient)
-                        composition_flags.append(composition_flag)
-                    tab = []
-                    for table, row_ind, col_ind, orient, table_ref in zip(tables, row_inds, col_inds, orients, table_refs):
-                        tab.append(self.construct_table_object(orient, table, row_ind, col_ind, table_ref))    
-                    for i, (t, comp_flag, caption, footer, ref) in enumerate(zip(tab,composition_flags, captions, footers, capt_refs)):
-                        if t is not None:
-                            t['order'] = i
-                            t['_id'] = ObjectId()
-                            t['paper_doi'] = self.doi
-                            t['composition_table'] = comp_flag
-                            t['caption'] = caption
-                            if ref is not None:
-                                t['caption_ref'] = ref
-                            if footer is not None:
-                                t['footer'] = footer
-                            if comp_flag:
-                                t = self.clean_composition_table(t, remaining = self.remaining)
-                            all_tables.append(t)
-                            print('Success: Extracted Tables from ', doi)
-                except IOError as e:
-                    print('Failure: No permission to read, DOI:', doi)
-                    failures += 1
+                # try:
+                problem = False
+                tables, captions, footers, capt_refs, table_refs = self.get_tables(f)
+                cols, rows, col_inds, row_inds = self.get_headers(tables)
+                pred_cols, pred_rows = self.classify_table_headers(cols, rows)
+                orients = []
+                composition_flags = []
+                for pred_col, pred_row, col, row in zip(pred_cols, pred_rows, cols, rows):
+                    orient, composition_flag  = self.determine_table_orientation(pred_col, pred_row, col, row)
+                    orients.append(orient)
+                    composition_flags.append(composition_flag)
+                tab = []
+                for table, row_ind, col_ind, orient, table_ref in zip(tables, row_inds, col_inds, orients, table_refs):
+                    tab.append(self.construct_table_object(orient, table, row_ind, col_ind, table_ref))    
+                for i, (t, comp_flag, caption, footer, ref) in enumerate(zip(tab,composition_flags, captions, footers, capt_refs)):
+                    if t is not None:
+                        t['order'] = i
+                        t['_id'] = ObjectId()
+                        t['paper_doi'] = self.doi
+                        t['composition_table'] = comp_flag
+                        t['caption'] = caption
+                        if ref is not None:
+                            t['caption_ref'] = ref
+                        if footer is not None:
+                            t['footer'] = footer
+                        if comp_flag:
+                            t = self.clean_composition_table(t, remaining = self.remaining)
+                        all_tables.append(t)
+                        print('Success: Extracted Tables from ', doi)
+                # except IOError as e:
+                #     print('Failure: No permission to read, DOI:', doi)
+                #     failures += 1
             elif 'xml' in f:
                 print('Extracting Tables (XML) from ', doi)
                 try:
