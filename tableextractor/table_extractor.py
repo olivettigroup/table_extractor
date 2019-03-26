@@ -977,14 +977,6 @@ class TableExtractor(object):
                     print( '      ', link['name'])
             print( '-------')
         print( '--------------')
-
-    def save_tables_to_paper_object(self, tables):
-        try:
-            self.connection[self.db][self.collection].find_one_and_update({'doi':self.doi}, {'$set': {'tables':tables}})
-            self.__log.info( "SUCCESS: Saved tables to paper, DOI:" + str(self.doi) )
-        except:
-            self.__log.info( "FAILURE: Could not update paper with tables, DOI:" + str(self.doi) )
-            self.update+=1
       
     def value_extractor(self,string):
         original_string = string[:]
