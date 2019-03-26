@@ -377,10 +377,10 @@ class TableExtractor(object):
         all_caption_refs = []
         all_footers = []
         all_ref_tables = []
-        soup = BeautifulSoup(open((xml), 'r+'), 'xml')
+        soup = BeautifulSoup(open(('data/'+xml), 'r+'), 'xml')
         tables = soup.find_all('table')
         if len(tables) == 0:
-            soup = BeautifulSoup(open(xml, 'r+'), 'lxml')
+            soup = BeautifulSoup(open('data/'+xml, 'r+'), 'lxml')
             tables = soup.find_all('table-wrap')
         for w, table in enumerate(tables):
             try:    
@@ -516,9 +516,9 @@ class TableExtractor(object):
         all_footers = []
         all_caption_ref = []
         try:
-            soup = BeautifulSoup(open((html), 'r+'), 'html.parser')
+            soup = BeautifulSoup(open(('data/'+html), 'r+'), 'html.parser')
         except UnicodeDecodeError:
-            soup = BeautifulSoup(open(html, 'rt', encoding = 'latin1'), 'html.parser')
+            soup = BeautifulSoup(open('data/'+html, 'rt', encoding = 'latin1'), 'html.parser')
         tables = soup.find_all('table')
         for i, table in enumerate(tables):
             try:
