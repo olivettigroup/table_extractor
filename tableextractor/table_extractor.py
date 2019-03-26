@@ -49,6 +49,7 @@ class TableExtractor(object):
                 # try:
                 problem = False
                 tables, captions, footers, capt_refs, table_refs = self.get_tables(f)
+                print(len(tables), len(captions), len(footers))
                 cols, rows, col_inds, row_inds = self.get_headers(tables)
                 pred_cols, pred_rows = self.classify_table_headers(cols, rows)
                 orients = []
@@ -517,7 +518,6 @@ class TableExtractor(object):
         all_caption_ref = []
         try:
             soup = BeautifulSoup(open(('data/'+html), 'r+'), 'html.parser')
-            print(soup)
         except UnicodeDecodeError:
             soup = BeautifulSoup(open('data/'+html, 'rt', encoding = 'latin1'), 'html.parser')
         tables = soup.find_all('table')
