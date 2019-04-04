@@ -13,7 +13,8 @@ This code extracts tables into json format from HTML/XML files. These HTML/XML f
     - Download all 4 files and place in the tableextractor/bin folder
 3. Install all dependencies
     - json, pandas, spacy, bs4, gensim, numpy, unidecode, sklearn, scipy, traceback
-4. Use Jupyter (Table Extractor Tutorial) to run the code
+4. Place all files in tableextractor/data 
+5. Use Jupyter (Table Extractor Tutorial) to run the code
 
 The code takes in a list of files and corresponding DOIs and returns a list of all tables extracted from the files as JSON objects. Currently, the code supports files from ACS, APS, Elsevier, Wiley, Springer, and RSC. 
 
