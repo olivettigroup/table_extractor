@@ -63,3 +63,8 @@ MR1- the maximum ring size of Zeo1
 FD2- the framework density of Zeo2
 
 MR2- the framework density of Zeo2
+
+# Citing
+If you use this code or data, please cite the following as appropriate. 
+
+[Citiation coming soon]
