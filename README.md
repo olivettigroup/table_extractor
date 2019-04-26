@@ -68,4 +68,7 @@ MR2- the framework density of Zeo2
 # Citing
 If you use this code or data, please cite the following as appropriate. 
 
-[Citiation coming soon]
+A Machine Learning Approach to Zeolite Synthesis Enabled by Automatic Literature Data Extraction
+Zach Jensen, Edward Kim, Soonhyoung Kwon, Terry Z. H. Gani, Yuriy Román-Leshkov, Manuel Moliner, Avelino Corma, and Elsa Olivetti
+ACS Central Science Article ASAP
+DOI: 10.1021/acscentsci.9b00193
