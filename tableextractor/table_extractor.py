@@ -821,8 +821,21 @@ class TableExtractor(object):
         for word, label in zip(words, labels):
             if str(word) in self.embeddings:
                 print(word)
-                print(self.embeddings[str(word)][:10])
-                emb_vector.append(self.embeddings[str(word)])
+                try:
+                    print(self.embeddings[str(word)][:10])
+                    emb_vector.append(self.embeddings[str(word)])
+                except:
+                    spl = word.split()
+                    curr = []    
+                    for w in spl:
+                        curr.append(self.embeddings[str(w)])
+                    curr_array = np.array(curr[0])
+                    for c in curr[1:]:
+                        curr_array = np.add(curr, c)
+                    print(curr_array.shape)
+                    print(curr_array[:10])
+                    emb_vector.append(curr_array)
+
                 label_vector.append(label)
             else:
                 label_vector.append(label)
