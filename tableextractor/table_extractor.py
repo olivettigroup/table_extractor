@@ -829,9 +829,7 @@ class TableExtractor(object):
                     curr = []    
                     for w in spl:
                         curr.append(self.embeddings[str(w)])
-                    curr_array = np.array(curr[0])
-                    for c in curr[1:]:
-                        curr_array = np.add(curr_array, c)
+                    curr_array = np.mean(np.array(curr), axis=0)
                     print(curr_array.shape)
                     print(curr_array[:10])
                     emb_vector.append(curr_array)
