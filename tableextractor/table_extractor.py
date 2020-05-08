@@ -803,6 +803,7 @@ class TableExtractor(object):
         else:
             self.embeddings = keyedvectors.KeyedVectors.load(file_loc)
             self.embeddings.bucket = 2000000
+            print(len(self.embeddings))
 
     def _normalize_string(self, string):
         ret_string = ''
@@ -818,7 +819,7 @@ class TableExtractor(object):
         emb_vector = []
         label_vector = []
         for word, label in zip(words, labels):
-            if str(word) in self.embeddings and str(word) != '':
+            if str(word) in self.embeddings:
                 print(word)
                 emb_vector.append(self.embeddings[str(word)])
                 label_vector.append(label)
