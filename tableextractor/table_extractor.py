@@ -831,7 +831,7 @@ class TableExtractor(object):
                         curr.append(self.embeddings[str(w)])
                     curr_array = np.array(curr[0])
                     for c in curr[1:]:
-                        curr_array = np.add(curr, c)
+                        curr_array = np.add(curr_array, c)
                     print(curr_array.shape)
                     print(curr_array[:10])
                     emb_vector.append(curr_array)
