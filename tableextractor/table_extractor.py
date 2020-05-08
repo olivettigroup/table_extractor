@@ -24,7 +24,10 @@ import traceback
 
 class TableExtractor(object):
     def __init__(self, domain_name = None, embedding_loc = 'bin/fasttext_embeddings-MINIFIED.model'):
-        self.nlp = spacy.load('en')
+        try:
+            self.nlp = spacy.load('en')
+        except:
+            self.nlp = spacy.load('en_core_web_sm')
         self.load_embeddings(file_loc = embedding_loc)
         self.load_units()
         self.unit_regex = re.compile('\(.*?\)')
