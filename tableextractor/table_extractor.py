@@ -803,7 +803,7 @@ class TableExtractor(object):
         else:
             self.embeddings = keyedvectors.KeyedVectors.load(file_loc)
             self.embeddings.bucket = 2000000
-            print(type(self.embeddings)
+            print(type(self.embeddings))
 
     def _normalize_string(self, string):
         ret_string = ''
