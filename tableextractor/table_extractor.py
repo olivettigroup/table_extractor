@@ -10,7 +10,7 @@ from bs4 import BeautifulSoup
 import spacy
 from spacy.tokens import Doc
 import re
-from gensim.models.depreciated import keyedvectors
+from gensim.models.deprecated import keyedvectors
 import numpy as np
 from unidecode import unidecode_expect_nonascii
 import unidecode
