@@ -802,7 +802,10 @@ class TableExtractor(object):
             print('Check the read-me')
         else:
             self.embeddings = keyedvectors.KeyedVectors.load(file_loc)
-            self.embeddings.bucket = 2000000
+            # self.embeddings.bucket = 2000000
+            self.emb_vocab_ft = dict([('<null>', 0), ('<oov>', 1)] +
+                         [(k, v.index+2) for k, v in ft_embeddings.vocab.items()])
+            self.emb_weights_ft = np.vstack([np.zeros((1,100)), np.ones((1,100)), np.array(ft_embeddings.syn0)])
             print(type(self.embeddings))
 
     def _normalize_string(self, string):
@@ -819,21 +822,23 @@ class TableExtractor(object):
         emb_vector = []
         label_vector = []
         for word, label in zip(words, labels):
-            if str(word) in self.embeddings:
-                print(word)
-                try:
-                    print(self.embeddings[str(word)][:10])
-                    emb_vector.append(self.embeddings[str(word)])
-                except:
-                    spl = word.split()
-                    curr = []    
-                    for w in spl:
-                        print(w)
-                        curr.append(self.embeddings[str(w)])
-                    curr_array = np.mean(np.array(curr), axis=0)
-                    print(curr_array.shape)
-                    print(curr_array[:10])
-                    emb_vector.append(curr_array)
+            if word_ in self.emb_vocab_ft:
+                emb_vector.append(self.emb_vocab_ft[word])
+            # if str(word) in self.embeddings:
+            #     print(word)
+            #     try:
+            #         print(self.embeddings[str(word)][:10])
+            #         emb_vector.append(self.embeddings[str(word)])
+            #     except:
+            #         spl = word.split()
+            #         curr = []    
+            #         for w in spl:
+            #             print(w)
+            #             curr.append(self.embeddings[str(w)])
+            #         curr_array = np.mean(np.array(curr), axis=0)
+            #         print(curr_array.shape)
+            #         print(curr_array[:10])
+            #         emb_vector.append(curr_array)
 
                 label_vector.append(label)
             else:
