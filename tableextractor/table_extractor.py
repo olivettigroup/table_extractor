@@ -807,6 +807,8 @@ class TableExtractor(object):
                          [(k, v.index+2) for k, v in self.embeddings.vocab.items()])
             self.emb_weights_ft = np.vstack([np.zeros((1,100)), np.ones((1,100)), np.array(self.embeddings.syn0)])
             print(type(self.embeddings))
+            print(self.emb_weights_ft.shape)
+            print(len(list(self.emb_vocab_ft.keys())))
 
     def _normalize_string(self, string):
         ret_string = ''
@@ -823,7 +825,7 @@ class TableExtractor(object):
         label_vector = []
         for word, label in zip(words, labels):
             if word in self.emb_vocab_ft:
-                emb_vector.append(self.emb_vocab_ft[word])
+                emb_vector.append(self.emb_vocab_[word])
             # if str(word) in self.embeddings:
             #     print(word)
             #     try:
