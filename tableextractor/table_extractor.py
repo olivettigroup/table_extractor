@@ -10,7 +10,7 @@ from bs4 import BeautifulSoup
 import spacy
 from spacy.tokens import Doc
 import re
-from gensim.models import FastTextKeyedVectors
+from gensim.models import fasttext
 import numpy as np
 from unidecode import unidecode_expect_nonascii
 import unidecode
@@ -801,7 +801,7 @@ class TableExtractor(object):
             print('Materials science training word2vec and fasttext are available for download')
             print('Check the read-me')
         else:
-            self.embeddings = keyedvectors.KeyedVectors.load(file_loc)
+            self.embeddings = fasttext.FastText.load(file_loc)
             self.embeddings.bucket = 2000000
             print(type(self.embeddings))
 
