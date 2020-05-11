@@ -844,6 +844,7 @@ class TableExtractor(object):
             else:
                 label_vector.append(label)
                 emb_vector.append(np.zeros(100, dtype=np.float32))
+        print(emb_vector.shape)
         return emb_vector, label_vector
 
     def classify_table_headers(self, cols, rows):
