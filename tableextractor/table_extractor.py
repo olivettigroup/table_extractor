@@ -828,6 +828,7 @@ class TableExtractor(object):
                     spl = word.split()
                     curr = []    
                     for w in spl:
+                        print(w)
                         curr.append(self.embeddings[str(w)])
                     curr_array = np.mean(np.array(curr), axis=0)
                     print(curr_array.shape)
