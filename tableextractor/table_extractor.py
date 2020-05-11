@@ -826,8 +826,8 @@ class TableExtractor(object):
         for word, label in zip(words, labels):
             if word in self.emb_vocab_ft:
                 ind = self.emb_vocab_ft[word]
-                print(ind)
-                emb_vector.append(self.emb_weights_ft[index])
+                print(word, ind)
+                emb_vector.append(self.emb_weights_ft[ind])
             # if str(word) in self.embeddings:
             #     print(word)
             #     try:
