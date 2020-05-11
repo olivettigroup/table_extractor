@@ -804,8 +804,8 @@ class TableExtractor(object):
             self.embeddings = keyedvectors.KeyedVectors.load(file_loc)
             # self.embeddings.bucket = 2000000
             self.emb_vocab_ft = dict([('<null>', 0), ('<oov>', 1)] +
-                         [(k, v.index+2) for k, v in ft_embeddings.vocab.items()])
-            self.emb_weights_ft = np.vstack([np.zeros((1,100)), np.ones((1,100)), np.array(ft_embeddings.syn0)])
+                         [(k, v.index+2) for k, v in self.embeddings.vocab.items()])
+            self.emb_weights_ft = np.vstack([np.zeros((1,100)), np.ones((1,100)), np.array(self.embeddings.syn0)])
             print(type(self.embeddings))
 
     def _normalize_string(self, string):
