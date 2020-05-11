@@ -845,6 +845,7 @@ class TableExtractor(object):
                 label_vector.append(label)
                 emb_vector.append(np.zeros(100, dtype=np.float32))
         emb_vector = np.array(emb_vector)
+        print(type(emb_vector[0]))
         print(emb_vector.shape)
         return emb_vector, label_vector
 
