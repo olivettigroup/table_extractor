@@ -806,9 +806,6 @@ class TableExtractor(object):
             self.emb_vocab_ft = dict([('<null>', 0), ('<oov>', 1)] +
                          [(k, v.index+2) for k, v in self.embeddings.vocab.items()])
             self.emb_weights_ft = np.vstack([np.zeros((1,100)), np.ones((1,100)), np.array(self.embeddings.syn0)])
-            print(type(self.embeddings))
-            print(self.emb_weights_ft.shape)
-            print(len(list(self.emb_vocab_ft.keys())))
 
     def _normalize_string(self, string):
         ret_string = ''
@@ -826,8 +823,9 @@ class TableExtractor(object):
         for word, label in zip(words, labels):
             if word in self.emb_vocab_ft:
                 ind = self.emb_vocab_ft[word]
-                print(word, ind)
                 emb_vector.append(self.emb_weights_ft[ind])
+           # Old way of getting embeddings, does not work on a model trained on 
+           # gensim 3.4 when using in gensim 3.7 and up
             # if str(word) in self.embeddings:
             #     print(word)
             #     try:
@@ -849,8 +847,6 @@ class TableExtractor(object):
                 label_vector.append(label)
                 emb_vector.append(np.zeros(100, dtype=np.float32))
         emb_vector = np.array(emb_vector)
-        print(type(emb_vector[0]))
-        print(emb_vector.shape)
         return emb_vector, label_vector
 
     def classify_table_headers(self, cols, rows):
