@@ -1,0 +1,1660 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="ie ie8" lang="en"><![endif]-->
+<!--[if !(IE)]><!-->
+<html lang="en">
+<!--<![endif]-->
+<head id="Head1">
+    <title>
+        
+    Aminothermal synthesis of CHA-type SAPO molecular sieves and their catalytic performance in methanol to olefins (MTO) reaction - Journal of Materials Chemistry A (RSC Publishing)
+
+    </title>
+    <meta charset="utf-8"><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"eec2473e72","applicationID":"13881625","transactionName":"ZFUBZhEEDUQEBhBbDl0fLmQgSiBYCxEBXBVwXw1GEQoPWwAXS1MTR1kAXgYJAlkBDApV","queueTime":0,"applicationTime":37,"agent":"","atts":""}</script><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VQYFWF9aDBABV1laBgcFUw==",licenseKey:"eec2473e72",applicationID:"13881625"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(t){try{s.console&&console.log(t)}catch(e){}}var o,i=t("ee"),a=t(25),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,e,n){r(n.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,s){try{l?l-=1:o(s||new UncaughtException(t,e,n),!0)}catch(f){try{i("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function o(t,e){var n=e?null:c.now();i("err",[t,n])}var i=t("handle"),a=t(26),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,p="nr@seenError",l=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(13),t(12),"addEventListener"in window&&t(6),c.xhrWrappable&&t(14),d=!0)}s.on("fn-start",function(t,e,n){d&&(l+=1)}),s.on("fn-err",function(t,e,n){d&&!n[p]&&(f(n,p,function(){return!0}),this.thrown=!0,o(n))}),s.on("fn-end",function(){d&&!this.thrown&&l>0&&(l-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(){L++,C=g.hash,this[u]=y.now()}function o(){L--,g.hash!==C&&i(0,!0);var t=y.now();this[h]=~~this[h]+t-this[u],this[d]=t}function i(t,e){E.emit("newURL",[""+g,e])}function a(t,e){t.on(e,function(){this[e]=y.now()})}var s="-start",c="-end",f="-body",u="fn"+s,d="fn"+c,p="cb"+s,l="cb"+c,h="jsTime",m="fetch",v="addEventListener",w=window,g=w.location,y=t("loader");if(w[v]&&y.xhrWrappable){var x=t(10),b=t(11),E=t(8),O=t(6),R=t(13),P=t(7),T=t(14),N=t(9),M=t("ee"),S=M.get("tracer");t(16),y.features.spa=!0;var C,L=0;M.on(u,r),M.on(p,r),M.on(d,o),M.on(l,o),M.buffer([u,d,"xhr-done","xhr-resolved"]),O.buffer([u]),R.buffer(["setTimeout"+c,"clearTimeout"+s,u]),T.buffer([u,"new-xhr","send-xhr"+s]),P.buffer([m+s,m+"-done",m+f+s,m+f+c]),E.buffer(["newURL"]),x.buffer([u]),b.buffer(["propagate",p,l,"executor-err","resolve"+s]),S.buffer([u,"no-"+u]),N.buffer(["new-jsonp","cb-start","jsonp-error","jsonp-end"]),a(T,"send-xhr"+s),a(M,"xhr-resolved"),a(M,"xhr-done"),a(P,m+s),a(P,m+"-done"),a(N,"new-jsonp"),a(N,"jsonp-end"),a(N,"cb-start"),E.on("pushState-end",i),E.on("replaceState-end",i),w[v]("hashchange",i,!0),w[v]("load",i,!0),w[v]("popstate",function(){i(0,L>1)},!0)}},{}],5:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(13),s=t(12),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",p="resource",l="-start",h="-end",m="fn"+l,v="fn"+h,w="bstTimer",g="pushState",y=t("loader");y.features.stn=!0,t(8),"addEventListener"in window&&t(6);var x=NREUM.o.EV;o.on(m,function(t,e){var n=t[0];n instanceof x&&(this.bstStart=y.now())}),o.on(v,function(t,e){var n=t[0];n instanceof x&&i("bst",[n,e,this.bstStart,y.now()])}),a.on(m,function(t,e,n){this.bstStart=y.now(),this.bstType=n}),a.on(v,function(t,e){i(w,[e,this.bstStart,y.now(),this.bstType])}),s.on(m,function(){this.bstStart=y.now()}),s.on(v,function(t,e){i(w,[e,this.bstStart,y.now(),"requestAnimationFrame"])}),o.on(g+l,function(t){this.time=y.now(),this.startPath=location.pathname+location.hash}),o.on(g+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(p)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(p)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],6:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&o(e)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,e){return t[1]}var a=t("ee").get("events"),s=t("wrap-function")(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=c(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?s(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],7:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=i(arguments),e={};o.emit(n+"before-start",[t],e);var a;e[m]&&e[m].dt&&(a=e[m].dt);var s=r.apply(this,t);return o.emit(n+"start",[t,a],s),s.then(function(t){return o.emit(n+"end",[null,t],s),t},function(t){throw o.emit(n+"end",[t],s),t})})}var o=t("ee").get("fetch"),i=t(26),a=t(25);e.exports=o;var s=window,c="fetch-",f=c+"body-",u=["arrayBuffer","blob","json","text","formData"],d=s.Request,p=s.Response,l=s.fetch,h="prototype",m="nr@context";d&&p&&l&&(a(u,function(t,e){r(d[h],e,f),r(p[h],e,f)}),r(s,"fetch",c),o.on(c+"end",function(t,e){var n=this;if(e){var r=e.headers.get("content-length");null!==r&&(n.rxSize=r),o.emit(c+"done",[null,e],n)}else o.emit(c+"done",[t],n)}))},{}],8:[function(t,e,n){var r=t("ee").get("history"),o=t("wrap-function")(r);e.exports=r;var i=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;i&&i.pushState&&i.replaceState&&(a=i),o.inPlace(a,["pushState","replaceState"],"-")},{}],9:[function(t,e,n){function r(t){function e(){c.emit("jsonp-end",[],p),t.removeEventListener("load",e,!1),t.removeEventListener("error",n,!1)}function n(){c.emit("jsonp-error",[],p),c.emit("jsonp-end",[],p),t.removeEventListener("load",e,!1),t.removeEventListener("error",n,!1)}var r=t&&"string"==typeof t.nodeName&&"script"===t.nodeName.toLowerCase();if(r){var o="function"==typeof t.addEventListener;if(o){var a=i(t.src);if(a){var u=s(a),d="function"==typeof u.parent[u.key];if(d){var p={};f.inPlace(u.parent,[u.key],"cb-",p),t.addEventListener("load",e,!1),t.addEventListener("error",n,!1),c.emit("new-jsonp",[t.src],p)}}}}}function o(){return"addEventListener"in window}function i(t){var e=t.match(u);return e?e[1]:null}function a(t,e){var n=t.match(p),r=n[1],o=n[3];return o?a(o,e[r]):e[r]}function s(t){var e=t.match(d);return e&&e.length>=3?{key:e[2],parent:a(e[1],window)}:{key:t,parent:window}}var c=t("ee").get("jsonp"),f=t("wrap-function")(c);if(e.exports=c,o()){var u=/[?&](?:callback|cb)=([^&#]+)/,d=/(.*)\.([^.]+)/,p=/^(\w+)(\.|$)(.*)$/,l=["appendChild","insertBefore","replaceChild"];Node&&Node.prototype&&Node.prototype.appendChild?f.inPlace(Node.prototype,l,"dom-"):(f.inPlace(HTMLElement.prototype,l,"dom-"),f.inPlace(HTMLHeadElement.prototype,l,"dom-"),f.inPlace(HTMLBodyElement.prototype,l,"dom-")),c.on("dom-start",function(t){r(t[0])})}},{}],10:[function(t,e,n){var r=t("ee").get("mutation"),o=t("wrap-function")(r),i=NREUM.o.MO;e.exports=r,i&&(window.MutationObserver=function(t){return this instanceof i?new i(o(t,"fn-")):i.apply(this,arguments)},MutationObserver.prototype=i.prototype)},{}],11:[function(t,e,n){function r(t){var e=a.context(),n=s(t,"executor-",e),r=new f(n);return a.context(r).getCtx=function(){return e},a.emit("new-promise",[r,e],e),r}function o(t,e){return e}var i=t("wrap-function"),a=t("ee").get("promise"),s=i(a),c=t(25),f=NREUM.o.PR;e.exports=a,f&&(window.Promise=r,["all","race"].forEach(function(t){var e=f[t];f[t]=function(n){function r(t){return function(){a.emit("propagate",[null,!o],i),o=o||!t}}var o=!1;c(n,function(e,n){Promise.resolve(n).then(r("all"===t),r(!1))});var i=e.apply(f,arguments),s=f.resolve(i);return s}}),["resolve","reject"].forEach(function(t){var e=f[t];f[t]=function(t){var n=e.apply(f,arguments);return t!==n&&a.emit("propagate",[t,!0],n),n}}),f.prototype["catch"]=function(t){return this.then(null,t)},f.prototype=Object.create(f.prototype,{constructor:{value:r}}),c(Object.getOwnPropertyNames(f),function(t,e){try{r[e]=f[e]}catch(n){}}),a.on("executor-start",function(t){t[0]=s(t[0],"resolve-",this),t[1]=s(t[1],"resolve-",this)}),a.on("executor-err",function(t,e,n){t[1](n)}),s.inPlace(f.prototype,["then"],"then-",o),a.on("then-start",function(t,e){this.promise=e,t[0]=s(t[0],"cb-",this),t[1]=s(t[1],"cb-",this)}),a.on("then-end",function(t,e,n){this.nextPromise=n;var r=this.promise;a.emit("propagate",[r,!0],n)}),a.on("cb-end",function(t,e,n){a.emit("propagate",[n,!0],this.nextPromise)}),a.on("propagate",function(t,e,n){this.getCtx&&!e||(this.getCtx=function(){if(t instanceof Promise)var e=a.context(t);return e&&e.getCtx?e.getCtx():this})}),r.toString=function(){return""+f})},{}],12:[function(t,e,n){var r=t("ee").get("raf"),o=t("wrap-function")(r),i="equestAnimationFrame";e.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],13:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function o(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var i=t("ee").get("timer"),a=t("wrap-function")(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";e.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],14:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",s)}function o(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,g,"fn-",s)}function i(t){y.push(t),h&&(b?b.then(a):v?v(a):(E=-E,O.data=E))}function a(){for(var t=0;t<y.length;t++)r([],y[t]);y.length&&(y=[])}function s(t,e){return e}function c(t,e){for(var n in t)e[n]=t[n];return e}t(6);var f=t("ee"),u=f.get("xhr"),d=t("wrap-function")(u),p=NREUM.o,l=p.XHR,h=p.MO,m=p.PR,v=p.SI,w="readystatechange",g=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],y=[];e.exports=u;var x=window.XMLHttpRequest=function(t){var e=new l(t);try{u.emit("new-xhr",[e],e),e.addEventListener(w,o,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(c(l,x),x.prototype=l.prototype,d.inPlace(x.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,e){r(t,e),i(e)}),u.on("open-xhr-start",r),h){var b=m&&m.resolve();if(!v&&!m){var E=1,O=document.createTextNode(E);new h(a).observe(O,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===w||a()})},{}],15:[function(t,e,n){function r(t){if(!i(t))return null;var e=window.NREUM;if(!e.loader_config)return null;var n=(e.loader_config.accountID||"").toString()||null,r=(e.loader_config.agentID||"").toString()||null,s=(e.loader_config.trustKey||"").toString()||null;if(!n||!r)return null;var c=a.generateCatId(),f=a.generateCatId(),u=Date.now(),d=o(c,f,u,n,r,s);return{header:d,guid:c,traceId:f,timestamp:u}}function o(t,e,n,r,o,i){var a="btoa"in window&&"function"==typeof window.btoa;if(!a)return null;var s={v:[0,1],d:{ty:"Browser",ac:r,ap:o,id:t,tr:e,ti:n}};return i&&r!==i&&(s.d.tk=i),btoa(JSON.stringify(s))}function i(t){var e=!1,n=!1,r={};if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(r=NREUM.init.distributed_tracing,n=!!r.enabled),n)if(t.sameOrigin)e=!0;else if(r.allowed_origins instanceof Array)for(var o=0;o<r.allowed_origins.length;o++){var i=s(r.allowed_origins[o]);if(t.hostname===i.hostname&&t.protocol===i.protocol&&t.port===i.port){e=!0;break}}return n&&e}var a=t(23),s=t(17);e.exports={generateTracePayload:r,shouldGenerateTrace:i}},{}],16:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<p;r++)t.removeEventListener(d[r],this.listener,!1);e.aborted||(n.duration=a.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==e.status&&(e.status=0):i(this,t),n.cbTime=this.cbTime,u.emit("xhr-done",[t],t),s("xhr",[e,n,this.startTime]))}}function o(t,e){var n=c(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.parsedOrigin=c(e),t.sameOrigin=t.parsedOrigin.sameOrigin}function i(t,e){t.params.status=e.status;var n=v(e,t.lastSize);if(n&&(t.metrics.rxSize=n),t.sameOrigin){var r=e.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var a=t("loader");if(a.xhrWrappable){var s=t("handle"),c=t(17),f=t(15).generateTracePayload,u=t("ee"),d=["load","error","abort","timeout"],p=d.length,l=t("id"),h=t(21),m=t(20),v=t(18),w=window.XMLHttpRequest;a.features.xhr=!0,t(14),t(7),u.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,e.loadCaptureCalled=!1,t.addEventListener("load",function(n){i(e,t)},!1),h&&(h>34||h<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),u.on("open-xhr-start",function(t){this.params={method:t[0]},o(this,t[1]),this.metrics={}}),u.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var n=f(this.parsedOrigin);n&&n.header&&(e.setRequestHeader("newrelic",n.header),this.dt=n)}),u.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],o=this;if(n&&r){var i=m(r);i&&(n.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"!==t.type||o.loadCaptureCalled||(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof e.onload))&&o.end(e)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}};for(var s=0;s<p;s++)e.addEventListener(d[s],this.listener,!1)}),u.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),u.on("xhr-load-added",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),u.on("xhr-load-removed",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),u.on("addEventListener-end",function(t,e){e instanceof w&&"load"===t[0]&&u.emit("xhr-load-added",[t[1],t[2]],e)}),u.on("removeEventListener-end",function(t,e){e instanceof w&&"load"===t[0]&&u.emit("xhr-load-removed",[t[1],t[2]],e)}),u.on("fn-start",function(t,e,n){e instanceof w&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),u.on("fn-end",function(t,e){this.xhrCbStart&&u.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,e],e)}),u.on("fetch-before-start",function(t){var e,n=t[1]||{};"string"==typeof t[0]?e=t[0]:t[0]&&t[0].url&&(e=t[0].url),e&&(this.parsedOrigin=c(e),this.sameOrigin=this.parsedOrigin.sameOrigin);var r=f(this.parsedOrigin);if(r&&r.header){var o=r.header;if("string"==typeof t[0]){var i={};for(var a in n)i[a]=n[a];i.headers=new Headers(n.headers||{}),i.headers.set("newrelic",o),this.dt=r,t.length>1?t[1]=i:t.push(i)}else t[0]&&t[0].headers&&(t[0].headers.append("newrelic",o),this.dt=r)}})}},{}],17:[function(t,e,n){var r={};e.exports=function(t){if(t in r)return r[t];var e=document.createElement("a"),n=window.location,o={};e.href=t,o.port=e.port;var i=e.href.split("://");!o.port&&i[1]&&(o.port=i[1].split("/")[0].split("@").pop().split(":")[1]),o.port&&"0"!==o.port||(o.port="https"===i[0]?"443":"80"),o.hostname=e.hostname||n.hostname,o.pathname=e.pathname,o.protocol=i[0],"/"!==o.pathname.charAt(0)&&(o.pathname="/"+o.pathname);var a=!e.protocol||":"===e.protocol||e.protocol===n.protocol,s=e.hostname===document.domain&&e.port===n.port;return o.sameOrigin=a&&(!e.hostname||s),"/"===o.pathname&&(r[t]=o),o}},{}],18:[function(t,e,n){function r(t,e){var n=t.responseType;return"json"===n&&null!==e?e:"arraybuffer"===n||"blob"===n||"json"===n?o(t.response):"text"===n||"document"===n||""===n||void 0===n?o(t.responseText):void 0}var o=t(20);e.exports=r},{}],19:[function(t,e,n){function r(){}function o(t,e,n){return function(){return i(t,[f.now()].concat(s(arguments)),e?null:this,n),e?void 0:this}}var i=t("handle"),a=t(25),s=t(26),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(t,e){u[e]=o(p+e,!0,"api")}),u.addPageAction=o(p+"addPageAction",!0),u.setCurrentRouteName=o(p+"routeName",!0),e.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(l+"tracer",[f.now(),t,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return e.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],n),t}finally{c.emit("fn-end",[f.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){h[e]=o(l+e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now(),!1,e])}},{}],20:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],21:[function(t,e,n){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),e.exports=r},{}],22:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?c("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&c("timing",["fcp",Math.floor(t.startTime)])})}function o(t,e){var n=t.getEntries();n.length>0&&c("lcp",[n[n.length-1]])}function i(t){if(t instanceof u&&!p){var e,n=Math.round(t.timeStamp);e=n>1e12?Date.now()-n:f.now()-n,p=!0,c("timing",["fi",n,{type:t.type,fid:e}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,s,c=t("handle"),f=t("loader"),u=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),s=new PerformanceObserver(o);try{a.observe({entryTypes:["paint"]}),s.observe({entryTypes:["largest-contentful-paint"]})}catch(d){}}if("addEventListener"in document){var p=!1,l=["click","keydown","mousedown","pointerdown","touchstart"];l.forEach(function(t){document.addEventListener(t,i,!1)})}}},{}],23:[function(t,e,n){function r(){function t(){return e?15&e[n++]:16*Math.random()|0}var e=null,n=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(e=r.getRandomValues(new Uint8Array(31)));for(var o,i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",s=0;s<i.length;s++)o=i[s],"x"===o?a+=t().toString(16):"y"===o?(o=3&t()|8,a+=o.toString(16)):a+=o;return a}function o(){function t(){return e?15&e[n++]:16*Math.random()|0}var e=null,n=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&Uint8Array&&(e=r.getRandomValues(new Uint8Array(31)));for(var o=[],i=0;i<16;i++)o.push(t().toString(16));return o.join("")}e.exports={generateUuid:r,generateCatId:o}},{}],24:[function(t,e,n){function r(t,e){if(!o)return!1;if(t!==o)return!1;if(!e)return!0;if(!i)return!1;for(var n=i.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var s=navigator.userAgent,c=s.match(a);c&&s.indexOf("Chrome")===-1&&s.indexOf("Chromium")===-1&&(o="Safari",i=c[1])}e.exports={agent:o,version:i,match:r}},{}],25:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],26:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],27:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function n(n,r,o,i){if(!p.aborted||i){t&&t(n,r,o);for(var a=e(o),s=m(n),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[y[n]];return d&&d.push([x,n,r,a]),a}}function l(t,e){g[t]=m(t).concat(e)}function h(t,e){var n=g[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return g[t]||[]}function v(t){return d[t]=d[t]||o(n)}function w(t,e){f(t,function(t,n){e=e||"feature",y[n]=e,e in u||(u[e]=[])})}var g={},y={},x={on:l,addEventListener:l,removeEventListener:h,emit:n,get:v,listeners:m,context:e,buffer:w,abort:a,aborted:!1};return x}function i(){return new r}function a(){(u.api||u.feature)&&(p.aborted=!0,u=p.backlog={})}var s="nr@context",c=t("gos"),f=t(25),u={},d={},p=e.exports=o();p.backlog=u},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!E++){var t=b.info=NREUM.info,e=l.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(y,function(e,n){t[e]||(t[e]=n)}),c("mark",["onload",a()+b.offset],null,"api");var n=l.createElement("script");n.src="https://"+t.agent,e.parentNode.insertBefore(n,e)}}function o(){"complete"===l.readyState&&i()}function i(){c("mark",["domContent",a()+b.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-b.offset}var s=(new Date).getTime(),c=t("handle"),f=t(25),u=t("ee"),d=t(24),p=window,l=p.document,h="addEventListener",m="attachEvent",v=p.XMLHttpRequest,w=v&&v.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:v,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var g=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-spa-1167.min.js"},x=v&&w&&w[h]&&!/CriOS/.test(navigator.userAgent),b=e.exports={offset:s,now:a,origin:g,features:{},xhrWrappable:x,userAgent:d};t(19),t(22),l[h]?(l[h]("DOMContentLoaded",i,!1),p[h]("load",r,!1)):(l[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",s],null,"api");var E=0,O=t(27)},{}],"wrap-function":[function(t,e,n){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(26),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;e.exports=function(t,e){function n(t,e,n,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof n?n(r,a):n||{}}catch(f){p([f,"",[r,a,o],s])}u(e+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(e+"err",[r,a,d],s),d}finally{u(e+"end",[r,a,c],s)}}return r(t)?t:(e||(e=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,e,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<e.length;c++)s=e[c],a=t[s],r(a)||(t[s]=n(a,f?s+o:o,i,s))}function u(n,r,o){if(!c||e){var i=c;c=!0;try{t.emit(n,r,o,e)}catch(a){p([a,n,r,o])}c=i}}function d(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){p([r])}for(var o in t)s.call(t,o)&&(e[o]=t[o]);return e}function p(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=o),n.inPlace=f,n.flag=a,n}},{}]},{},["loader",2,16,5,3,4]);</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="dns-prefetch" href="//www.rsc-cdn.org">
+    <link rel="dns-prefetch" href="//www.googletagmanager.com">
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#2d89ef">
+    <meta name="theme-color" content="#ffffff">
+    <!--[if lt IE 9 ]>
+      <script>
+      document.createElement('header');
+      document.createElement('nav');
+      document.createElement('section');
+      document.createElement('article');
+      document.createElement('aside');
+      document.createElement('footer');
+      </script>
+    <![endif]-->
+    <link href="https://www.rsc-cdn.org/oxygen/assets/webfonts/fonts.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://www.rsc-cdn.org/pubs-core/2020.0.92/content/stylesheets/pubs-ui.min.css" rel="stylesheet" type="text/css" />
+    
+
+    
+
+<meta name="dc.domain" content="pdf" />
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "publisher": {
+      "@type": "Organization",
+      "name": "The Royal Society of Chemistry"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://pubs.rsc.org/en/content/articlelanding/2013/ta/c3ta12829f"
+    },
+    "headline": "Aminothermal synthesis of CHA-type SAPO molecular sieves and their catalytic performance in methanol to olefins (MTO) reaction",
+    "image": "https://pubs.rsc.org/en/Content/Image/GA/C3TA12829F",
+    "isAccessibleForFree": "False",
+    "hasPart": {
+      "@type": "WebPageElement",
+      "isAccessibleForFree": "False",
+      "cssSelector": ".t-html"
+    }
+  }
+</script>
+<link rel="canonical" href="https://pubs.rsc.org/en/content/articlelanding/2013/ta/c3ta12829f" />
+    <meta name="DC.Creator" content="Dong Fan" />
+<meta content="Dong Fan" name="citation_author" /><meta content="Dalian National Laboratory for Clean Energy, Dalian Institute of Chemical Physics, Chinese Academy of Sciences, Dalian, P. R. China" name="citation_author_institution" /><meta content="National Engineering Laboratory for Methanol to Olens, Dalian Institute of Chemical Physics, Chinese Academy of Sciences, Dalian, P. R. China" name="citation_author_institution" /><meta content="University of Chinese Academy of Sciences, Beijing, P. R. China" name="citation_author_institution" />    <meta name="DC.Creator" content="Peng Tian" />
+<meta content="Peng Tian" name="citation_author" /><meta content="Dalian National Laboratory for Clean Energy, Dalian Institute of Chemical Physics, Chinese Academy of Sciences, Dalian, P. R. China" name="citation_author_institution" /><meta content="National Engineering Laboratory for Methanol to Olens, Dalian Institute of Chemical Physics, Chinese Academy of Sciences, Dalian, P. R. China" name="citation_author_institution" />    <meta name="DC.Creator" content="Xiong Su" />
+<meta content="Xiong Su" name="citation_author" /><meta content="Dalian National Laboratory for Clean Energy, Dalian Institute of Chemical Physics, Chinese Academy of Sciences, Dalian, P. R. China" name="citation_author_institution" /><meta content="National Engineering Laboratory for Methanol to Olens, Dalian Institute of Chemical Physics, Chinese Academy of Sciences, Dalian, P. R. China" name="citation_author_institution" /><meta content="University of Chinese Academy of Sciences, Beijing, P. R. China" name="citation_author_institution" />    <meta name="DC.Creator" content="Yangyang Yuan" />
+<meta content="Yangyang Yuan" name="citation_author" /><meta content="Dalian National Laboratory for Clean Energy, Dalian Institute of Chemical Physics, Chinese Academy of Sciences, Dalian, P. R. China" name="citation_author_institution" /><meta content="National Engineering Laboratory for Methanol to Olens, Dalian Institute of Chemical Physics, Chinese Academy of Sciences, Dalian, P. R. China" name="citation_author_institution" /><meta content="University of Chinese Academy of Sciences, Beijing, P. R. China" name="citation_author_institution" />    <meta name="DC.Creator" content="Dehua Wang" />
+<meta content="Dehua Wang" name="citation_author" /><meta content="Dalian National Laboratory for Clean Energy, Dalian Institute of Chemical Physics, Chinese Academy of Sciences, Dalian, P. R. China" name="citation_author_institution" /><meta content="National Engineering Laboratory for Methanol to Olens, Dalian Institute of Chemical Physics, Chinese Academy of Sciences, Dalian, P. R. China" name="citation_author_institution" /><meta content="University of Chinese Academy of Sciences, Beijing, P. R. China" name="citation_author_institution" />    <meta name="DC.Creator" content="Chan Wang" />
+<meta content="Chan Wang" name="citation_author" /><meta content="Dalian National Laboratory for Clean Energy, Dalian Institute of Chemical Physics, Chinese Academy of Sciences, Dalian, P. R. China" name="citation_author_institution" /><meta content="National Engineering Laboratory for Methanol to Olens, Dalian Institute of Chemical Physics, Chinese Academy of Sciences, Dalian, P. R. China" name="citation_author_institution" /><meta content="University of Chinese Academy of Sciences, Beijing, P. R. China" name="citation_author_institution" />    <meta name="DC.Creator" content="Miao Yang" />
+<meta content="Miao Yang" name="citation_author" /><meta content="Dalian National Laboratory for Clean Energy, Dalian Institute of Chemical Physics, Chinese Academy of Sciences, Dalian, P. R. China" name="citation_author_institution" /><meta content="National Engineering Laboratory for Methanol to Olens, Dalian Institute of Chemical Physics, Chinese Academy of Sciences, Dalian, P. R. China" name="citation_author_institution" />    <meta name="DC.Creator" content="Linying Wang" />
+<meta content="Linying Wang" name="citation_author" /><meta content="Dalian National Laboratory for Clean Energy, Dalian Institute of Chemical Physics, Chinese Academy of Sciences, Dalian, P. R. China" name="citation_author_institution" /><meta content="National Engineering Laboratory for Methanol to Olens, Dalian Institute of Chemical Physics, Chinese Academy of Sciences, Dalian, P. R. China" name="citation_author_institution" />    <meta name="DC.Creator" content="Shutao Xu" />
+<meta content="Shutao Xu" name="citation_author" /><meta content="Dalian National Laboratory for Clean Energy, Dalian Institute of Chemical Physics, Chinese Academy of Sciences, Dalian, P. R. China" name="citation_author_institution" /><meta content="National Engineering Laboratory for Methanol to Olens, Dalian Institute of Chemical Physics, Chinese Academy of Sciences, Dalian, P. R. China" name="citation_author_institution" />    <meta name="DC.Creator" content="Zhongmin Liu" />
+<meta content="Zhongmin Liu" name="citation_author" /><meta content="Dalian National Laboratory for Clean Energy, Dalian Institute of Chemical Physics, Chinese Academy of Sciences, Dalian, P. R. China" name="citation_author_institution" /><meta content="National Engineering Laboratory for Methanol to Olens, Dalian Institute of Chemical Physics, Chinese Academy of Sciences, Dalian, P. R. China" name="citation_author_institution" /><meta name="DC.title" content="Aminothermal synthesis of CHA-type SAPO molecular sieves and their catalytic performance in methanol to olefins (MTO) reaction" />
+<meta name="DC.publisher" content="The Royal Society of Chemistry" />
+
+<meta name="DC.issued" content="2013/09/18" />
+<meta name="DC.Identifier" scheme="doi" content="10.1039/C3TA12829F" />
+<meta name="DC.Language" content="en" />
+<meta name="PPL.DocType" content="journals" />
+<meta name="description" content="Aminothermal synthesis of SAPO molecular sieves, in which organic amines are used as both solvent and template, is explored based on a variety of amines. Di-iso-propylamine (DIPA) and N,N,N′,N′-tetramethylethylenediamine (TMEDA) are found to lead to the rapid crystallization of SAPO-34 with high solid yield.
+    " />
+
+<meta content="2050-7496" name="citation_issn" />
+<meta content="Aminothermal synthesis of CHA-type SAPO molecular sieves and their catalytic performance in methanol to olefins (MTO) reaction" name="citation_title" />
+<meta content="2013/09/18" name="citation_online_date" />
+<meta content="2013/10/29" name="citation_publication_date" />
+<meta content="Journal of Materials Chemistry A" name="citation_journal_title" />
+<meta content="1" name="citation_volume" />
+<meta content="45" name="citation_issue" />
+<meta content="14206" name="citation_firstpage" />
+<meta content="14213" name="citation_lastpage" />
+<meta content="10.1039/C3TA12829F" name="citation_doi" />
+<meta content="https://pubs.rsc.org/en/content/articlepdf/2013/ta/c3ta12829f" name="citation_pdf_url" />
+<meta content="https://pubs.rsc.org/en/content/articlelanding/2013/ta/c3ta12829f" name="citation_abstract_html_url" />
+<meta content="https://pubs.rsc.org/en/content/articlehtml/2013/ta/c3ta12829f" name="citation_fulltext_html_url" />
+<meta content="J. Mater. Chem. A" name="citation_journal_abbrev" />
+<meta name="keywords" content="" />
+            <meta name="citation_reference" content="citation_author=B. M. Lok;
+citation_author=C. A. Messina;
+citation_author=R. L. Patton;
+citation_author=R. T. Gajek;
+citation_author=T. R. Cannan;
+citation_author=E. M. Flanigen;
+citation_journal_title=J. Am. Chem. Soc.;
+citation_volume=106;
+citation_pages=6092-6093;citation_publication_date=1984;
+" />
+            <meta name="citation_reference" content="citation_author=S. Wilson;
+citation_author=P. Barger;
+citation_journal_title=Microporous Mesoporous Mater.;
+citation_volume=29;
+citation_pages=117-126;citation_publication_date=1999;
+" />
+            <meta name="citation_reference" content="citation_author=J. Liang;
+citation_author=H. Y. Li;
+citation_author=S. Zhao;
+citation_author=W. G. Guo;
+citation_author=R. H. Wang;
+citation_author=M. L. Ying;
+citation_journal_title=Appl. Catal.;
+citation_volume=64;
+citation_pages=31-40;citation_publication_date=1990;
+" />
+            <meta name="citation_reference" content="citation_author=I. M. Dahl;
+citation_author=S. Kolboe;
+citation_journal_title=J. Catal.;
+citation_volume=149;
+citation_pages=458-464;citation_publication_date=1994;
+" />
+            <meta name="citation_reference" content="citation_author=W. G. Song;
+citation_author=H. Fu;
+citation_author=J. F. Haw;
+citation_journal_title=J. Am. Chem. Soc.;
+citation_volume=123;
+citation_pages=4749-4754;citation_publication_date=2001;
+" />
+            <meta name="citation_reference" content="citation_author=W. G. Song;
+citation_author=H. Fu;
+citation_author=J. F. Haw;
+citation_journal_title=J. Phys. Chem. B;
+citation_volume=105;
+citation_pages=12839-12843;citation_publication_date=2001;
+" />
+            <meta name="citation_reference" content="citation_author=W. G. Song;
+citation_author=J. F. Haw;
+citation_author=J. B. Nicholas;
+citation_author=C. S. Heneghan;
+citation_journal_title=J. Am. Chem. Soc.;
+citation_volume=122;
+citation_pages=10726-10727;citation_publication_date=2000;
+" />
+            <meta name="citation_reference" content="citation_author=J. Z. Li;
+citation_author=Y. X. Wei;
+citation_author=J. R. Chen;
+citation_author=P. Tian;
+citation_author=X. Su;
+citation_author=S. T. Xu;
+citation_author=Y. Qi;
+citation_author=Q. Y. Wang;
+citation_author=Y. Zhou;
+citation_author=Y. L. He;
+citation_author=Z. M. Liu;
+citation_journal_title=J. Am. Chem. Soc.;
+citation_volume=134;
+citation_pages=836-839;citation_publication_date=2012;
+" />
+            <meta name="citation_reference" content="citation_author=D. W. Lewis;
+citation_author=C. R. A. Catlow;
+citation_author=J. M. Thomas;
+citation_journal_title=Chem. Mater.;
+citation_volume=8;
+citation_pages=1112-1118;citation_publication_date=1996;
+" />
+            <meta name="citation_reference" content="citation_author=D. W. Lewis;
+citation_author=C. M. Freeman;
+citation_author=C. R. A. Catlow;
+citation_journal_title=J. Phys. Chem.;
+citation_volume=99;
+citation_pages=11194-11202;citation_publication_date=1995;
+" />
+            <meta name="citation_reference" content="citation_author=N. Rajic;
+citation_author=D. Stojakovic;
+citation_author=S. Hocevar;
+citation_author=V. Kaucic;
+citation_journal_title=Zeolites;
+citation_volume=13;
+citation_pages=384-387;citation_publication_date=1993;
+" />
+            <meta name="citation_reference" content="citation_author=E. Dumitriu;
+citation_author=A. Azzouz;
+citation_author=V. Hulea;
+citation_author=D. Lutic;
+citation_author=H. Kessler;
+citation_journal_title=Microporous Mater.;
+citation_volume=10;
+citation_pages=1-12;citation_publication_date=1997;
+" />
+            <meta name="citation_reference" content="citation_author=A. M. Prakash;
+citation_author=S. Unnikrishnan;
+citation_journal_title=J. Chem. Soc., Faraday Trans.;
+citation_volume=90;
+citation_pages=2291-2296;citation_publication_date=1994;
+" />
+            <meta name="citation_reference" content="citation_author=G. Liu;
+citation_author=P. Tian;
+citation_author=J. Li;
+citation_author=D. Zhang;
+citation_author=F. Zhou;
+citation_author=Z. Liu;
+citation_journal_title=Microporous Mesoporous Mater.;
+citation_volume=111;
+citation_pages=143-149;citation_publication_date=2008;
+" />
+            <meta name="citation_reference" content="citation_author=G. Y. Liu;
+citation_author=P. Tian;
+citation_author=Y. Zhang;
+citation_author=J. Z. Li;
+citation_author=L. Xu;
+citation_author=S. H. Meng;
+citation_author=Z. M. Liu;
+citation_journal_title=Microporous Mesoporous Mater.;
+citation_volume=114;
+citation_pages=416-423;citation_publication_date=2008;
+" />
+            <meta name="citation_reference" content="citation_author=R. Vomscheid;
+citation_author=M. Briend;
+citation_author=M. J. Peltre;
+citation_author=P. P. Man;
+citation_author=D. Barthomeuf;
+citation_journal_title=J. Phys. Chem.;
+citation_volume=98;
+citation_pages=9614-9618;citation_publication_date=1994;
+" />
+            <meta name="citation_reference" content="citation_author=M. Briend;
+citation_author=R. Vomscheid;
+citation_author=M. J. Peltre;
+citation_author=P. P. Man;
+citation_author=D. Barthomeuf;
+citation_journal_title=J. Phys. Chem.;
+citation_volume=99;
+citation_pages=8270-8276;citation_publication_date=1995;
+" />
+            <meta name="citation_reference" content="citation_author=K. Y. Lee;
+citation_author=H. J. Chae;
+citation_author=S. Y. Jeong;
+citation_author=G. Seo;
+citation_journal_title=Appl. Catal., A;
+citation_volume=369;
+citation_pages=60-66;citation_publication_date=2009;
+" />
+            <meta name="citation_reference" content="citation_author=N. Nishiyama;
+citation_author=M. Kawaguchi;
+citation_author=Y. Hirota;
+citation_author=D. Van Vu;
+citation_author=Y. Egashira;
+citation_author=K. Ueyama;
+citation_journal_title=Appl. Catal., A;
+citation_volume=362;
+citation_pages=193-199;citation_publication_date=2009;
+" />
+            <meta name="citation_reference" content="citation_author=R. E. Morris;
+citation_author=S. J. Weigel;
+citation_journal_title=Chem. Soc. Rev.;
+citation_volume=26;
+citation_pages=309-317;citation_publication_date=1997;
+" />
+            <meta name="citation_reference" content="citation_author=Y. Jin;
+citation_author=Q. Sun;
+citation_author=G. Qi;
+citation_author=C. Yang;
+citation_author=J. Xu;
+citation_author=F. Chen;
+citation_author=X. Meng;
+citation_author=F. Deng;
+citation_author=F.-S. Xiao;
+citation_journal_title=Angew. Chem.;
+citation_volume=125;
+citation_pages=9342-9345;citation_publication_date=2013;
+" />
+            <meta name="citation_reference" content="citation_author=Q. S. Huo;
+citation_author=R. R. Xu;
+citation_journal_title=J. Chem. Soc., Chem. Commun.;
+citation_pages=783-784;citation_publication_date=1990;
+" />
+            <meta name="citation_reference" content="citation_author=A. K. Sinha;
+citation_author=S. Seelan;
+citation_journal_title=Appl. Catal., A;
+citation_volume=270;
+citation_pages=245-252;citation_publication_date=2004;
+" />
+            <meta name="citation_reference" content="citation_author=N. Venkatathri;
+citation_journal_title=Catal. Commun.;
+citation_volume=7;
+citation_pages=773-777;citation_publication_date=2006;
+" />
+            <meta name="citation_reference" content="citation_author=D. M. Bibby;
+citation_author=M. P. Dale;
+citation_journal_title=Nature;
+citation_volume=317;
+citation_pages=157-158;citation_publication_date=1985;
+" />
+            <meta name="citation_reference" content="citation_author=Q. H. Huo;
+citation_author=R. R. Xu;
+citation_author=S. G. Li;
+citation_author=Z. G. Ma;
+citation_author=J. M. Thomas;
+citation_author=R. H. Jones;
+citation_author=A. M. Chippindale;
+citation_journal_title=J. Chem. Soc., Chem. Commun.;
+citation_pages=875-876;citation_publication_date=1992;
+" />
+            <meta name="citation_reference" content="citation_author=R. H. Jones;
+citation_author=J. M. Thomas;
+citation_author=J. S. Chen;
+citation_author=R. R. Xu;
+citation_author=Q. S. Huo;
+citation_author=S. G. Li;
+citation_author=Z. G. Ma;
+citation_author=A. M. Chippindale;
+citation_journal_title=J. Solid State Chem.;
+citation_volume=102;
+citation_pages=204-208;citation_publication_date=1993;
+" />
+            <meta name="citation_reference" content="citation_author=D. Fan;
+citation_author=P. Tian;
+citation_author=S. Xu;
+citation_author=Q. Xia;
+citation_author=X. Su;
+citation_author=L. Zhang;
+citation_author=Y. Zhang;
+citation_author=Y. He;
+citation_author=Z. Liu;
+citation_journal_title=J. Mater. Chem.;
+citation_volume=22;
+citation_pages=6568;citation_publication_date=2012;
+" />
+            <meta name="citation_reference" content="citation_author=S. Ashtekar;
+citation_author=S. V. V. Chilukuri;
+citation_author=D. K. Chakrabarty;
+citation_journal_title=J. Phys. Chem.;
+citation_volume=98;
+citation_pages=4878-4883;citation_publication_date=1994;
+" />
+            <meta name="citation_reference" content="citation_author=L. Zhang;
+citation_author=J. Yao;
+citation_author=C. Zeng;
+citation_author=N. Xu;
+citation_journal_title=Chem. Commun.;
+citation_pages=2232;citation_publication_date=2003;
+" />
+            <meta name="citation_reference" content="citation_author=H. O. Pastore;
+citation_author=E. C. de Oliveira;
+citation_author=G. B. Superti;
+citation_author=G. Gatti;
+citation_author=L. Marchese;
+citation_journal_title=J. Phys. Chem. C;
+citation_volume=111;
+citation_pages=3116-3129;citation_publication_date=2007;
+" />
+            <meta name="citation_reference" content="citation_author=L. Xu;
+citation_author=A. P. Du;
+citation_author=Y. X. Wei;
+citation_author=Y. L. Wang;
+citation_author=Z. X. Yu;
+citation_author=Y. L. He;
+citation_author=X. Z. Zhang;
+citation_author=Z. M. Liu;
+citation_journal_title=Microporous Mesoporous Mater.;
+citation_volume=115;
+citation_pages=332-337;citation_publication_date=2008;
+" />
+            <meta name="citation_reference" content="citation_author=C. Doremieux-Morin;
+citation_author=C. Martin;
+citation_author=J.-M. Bregeault;
+citation_author=J. Fraissard;
+citation_journal_title=Appl. Catal.;
+citation_volume=77;
+citation_pages=149-161;citation_publication_date=1991;
+" />
+            <meta name="citation_reference" content="citation_author=L. Zhang;
+citation_author=J. Bates;
+citation_author=D. H. Chen;
+citation_author=H. Y. Nie;
+citation_author=Y. N. Huang;
+citation_journal_title=J. Phys. Chem. C;
+citation_volume=115;
+citation_pages=22309-22319;citation_publication_date=2011;
+" />
+            <meta name="citation_reference" content="citation_author=B. Chen;
+citation_author=Y. Huang;
+citation_journal_title=J. Phys. Chem. C;
+citation_volume=111;
+citation_pages=15236-15243;citation_publication_date=2007;
+" />
+            <meta name="citation_reference" content="citation_author=A. Izadbakhsh;
+citation_author=F. Farhadi;
+citation_author=F. Khorasheh;
+citation_author=S. Sahebdelfar;
+citation_author=M. Asadi;
+citation_author=Y. Z. Feng;
+citation_journal_title=Appl. Catal., A;
+citation_volume=364;
+citation_pages=48-56;citation_publication_date=2009;
+" />
+            <meta name="citation_reference" content="citation_author=U. Olsbye;
+citation_author=S. Svelle;
+citation_author=M. Bjrgen;
+citation_author=P. Beato;
+citation_author=T. V. W. Janssens;
+citation_author=F. Joensen;
+citation_author=S. Bordiga;
+citation_author=K. P. Lillerud;
+citation_journal_title=Angew. Chem., Int. Ed.;
+citation_volume=51;
+citation_pages=5810-5831;citation_publication_date=2012;
+" />
+            <meta name="citation_reference" content="citation_author=L.-T. Yuen;
+citation_author=S. I. Zones;
+citation_author=T. V. Harris;
+citation_author=E. J. Gallegos;
+citation_author=A. Auroux;
+citation_journal_title=Microporous Mater.;
+citation_volume=2;
+citation_pages=105-117;citation_publication_date=1994;
+" />
+            <meta name="citation_reference" content="citation_author=J. S. Chen;
+citation_author=J. M. Thomas;
+citation_journal_title=Catal. Lett.;
+citation_volume=11;
+citation_pages=199-207;citation_publication_date=1991;
+" />
+<meta content="Aminothermal synthesis of SAPO molecular sieves, in which organic amines are used as both solvent and template, is explored based on a variety of amines. Di-iso-propylamine (DIPA) and N,N,N′,N′-tetramethylethylenediamine (TMEDA) are found to lead to the rapid crystallization of SAPO-34 with high solid yield. A solid yield of 96.2% could be acquired using the TMEDA system (200 °C, 12 h), which is the highest value ever reported for SAPO molecular sieves. SAPO-44 is obtained for the first time using the hexamethyleneimine (HMI) template. Detailed synthetic investigation shows that the silicon content in the initial gel has an important effect on the crystalline nature of the final products, and higher Si concentration favours the synthesis of pure SAPO-34 and SAPO-44. In addition, it is shown that the Si coordination environment in the samples is closely related to the choice of template. Among the three samples investigated, SAPO-34-DIPA has the lowest threshold of Si content for the formation of Si islands in the framework due to the smallest charge compensation centers occluded in its CHA cage. The catalytic performance of the synthesized samples is tested by the MTO reaction and a high olefin selectivity of 85.8% is obtained on SAPO-34 templated by DIPA." name="citation_abstract" />
+
+<meta name="fragment" content="!" />
+
+
+
+    <script>
+        var _gaq = _gaq || [];
+
+        _gaq.push(
+            ['_setAccount', 'UA-20361743-1'],
+            ['_setDomainName', '.rsc.org'],
+            ['_setAllowLinker', true]
+        );
+    </script>
+
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-56FZ7G');</script>
+        <!-- End Google Tag Manager -->
+
+
+</head>
+
+<body id="pagetop" class="oxy-ui pubs-ui 
+    alp-page
+">
+
+        <!-- Google Tag Manager (noscript) -->
+        <noscript>
+            <iframe src="//www.googletagmanager.com/ns.html?id=GTM-56FZ7G"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
+        <!-- End Google Tag Manager (noscript) -->
+
+
+        <div data-id="pnlAccSkipLinks" class="skipto-control">
+            <a href="#maincontent" class="skipto__link">
+                <div class="viewport r-gutter">
+                    Jump to main content <img src="https://www.rsc-cdn.org/oxygen/assets/icons/arrow-right-o-light.png" width="24" class="ver-m" alt="">
+                </div>
+            </a>
+            <a href="#SearchText" class="skipto__link">
+                <div class="viewport r-gutter">
+                    Jump to site search <img src="https://www.rsc-cdn.org/oxygen/assets/icons/arrow-right-o-light.png" width="24" class="ver-m" alt="">
+                </div>
+            </a>
+        </div>
+
+    <div data-id="pnlGlobalHeader" class="pubs-header">
+        <div class="viewport">
+            <div class="pubs-header__wrapper">
+                <div class="pubs-header__cell pubs-header__cell--menu">
+                    <a href="#" class="pubs-header__btn pubs-header__btn--open" aria-label="Go to site menu"><img src="https://www.rsc-cdn.org/oxygen/assets/icons/menu-light.png" width="24" alt=""></a>
+                </div>
+
+                <div class="pubs-header__cell pubs-header__cell--home">
+                    <a href="/" class="pubs-header__link pubs-header__link--home" title="Publishing home page" aria-label="Publishing home page">Publishing</a>
+                </div>
+
+
+
+<div class="pubs-header__cell pubs-header__cell--nav">
+    <nav class="pubs-header__nav">
+        <ul>
+                    <li class="pubs-header__nav-item"><a href="/en/journals?key=title&amp;value=current" class="pubs-header__link" target="_self">Journals</a></li>
+                    <li class="pubs-header__nav-item"><a href="/en/ebooks?key=title&amp;value=newtitle" class="pubs-header__link" target="_self">Books</a></li>
+                    <li class="pubs-header__nav-item"><a href="https://www.rsc.org/journals-books-databases/databases-literature-updates/" class="pubs-header__link" target="_blank">Databases</a></li>
+        </ul>
+    </nav>
+</div>
+
+
+<div class="pubs-header__cell pubs-header__cell--search">
+    <div class="pubs-search-control">
+<form action="/en/results" id="SimpleSearch-form" method="post">            <label for="SearchText" class="sr-only">Search</label>
+            <input autocomplete="off" class="pubs-search__input" id="SearchText" name="SearchText" type="text" value="" />
+            <div class="pubs-search__actions">
+                <button class="input__search-submit" type="submit" aria-label="Search" id="btnNavSearchInput"><img src="https://www.rsc-cdn.org/oxygen/assets/icons/arrow-right.png" width="32" alt=""></button>
+                <a class="pubs-search__adv-link" href="/en/search/advancedsearch" aria-label="Advanced search" id="advancedLink">Advanced</a>
+            </div>
+            <span class="pubs-search__icon"></span>
+</form>    </div>
+</div>
+
+
+                <div class="pubs-header__cell pubs-header__cell--login">
+                        <a href="/en/account/logon" class="pubs-header__btn" aria-label="Log in or register"><img src="https://www.rsc-cdn.org/oxygen/assets/icons/user-light.png" width="24" alt="" id="userIcon"></a>
+                </div>
+
+
+<div class="pubs-header__cell pubs-header__cell--trolley">
+    <a href="https://www.rsc.org/basket/shoppingcart/orderitems?returnurl=https://pubs.rsc.org/en/content/articlelanding/2013/TA/c3ta12829f" class="pubs-header__btn" aria-label="View your basket"><img src="https://www.rsc-cdn.org/oxygen/assets/icons/trolley-light.png" width="24" alt="" id="trolleyIcon"></a>
+    <span class="badge badge--count" style="display: none;"></span>
+</div>
+
+
+                <div class="pubs-header__cell pubs-header__cell--logo">
+                    <a href="https://www.rsc.org" class=""><img src="https://www.rsc-cdn.org/pubs-core/2020.0.92/content/NewImages/rsc-logo-rev-pubs.svg" height="40" alt="Royal Society of Chemistry homepage"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+<div class="pubs-nav-drawer">
+    <nav class="pubs-nav-control">
+        <div class="pubs-nav__header">
+            <a href="#" class="pubs-header__btn pubs-nav__close" tabindex="-1" aria-label="You are in the site menu. (Click to close)"><img src="https://www.rsc-cdn.org/oxygen/assets/icons/cross-light.png" width="24" alt=""></a>
+            <a href="/" class="pubs-header__link--home pubs-nav__title" tabindex="-1" title="Publishing home page" aria-label="Publishing home page">Publishing</a>
+        </div>
+        <div class="pubs-nav__body scrollbar--slim">
+                    <div class="pubs-nav__list autopad--h">
+                        <div class="pubs-nav__item">
+                            <a href="/en/journals?key=title&amp;value=current" class="pubs-nav__link" target="_self" tabindex="-1">Journals</a>
+                        </div>
+                                <div class="pubs-nav__item pubs-nav__indent">
+                                        <a target="_self" href="/en/journals?key=title&amp;value=current" class="pubs-nav__link" tabindex="-1">Current Journals</a>
+                                </div>
+                                <div class="pubs-nav__item pubs-nav__indent">
+                                        <a target="_self" href="/en/journals?key=title&amp;value=archive" class="pubs-nav__link" tabindex="-1">Archive Journals</a>
+                                </div>
+                                <div class="pubs-nav__item pubs-nav__indent">
+                                        <a target="_self" href="/en/journals?key=title&amp;value=all" class="pubs-nav__link" tabindex="-1">All Journals</a>
+                                </div>
+
+                    </div>
+                    <div class="pubs-nav__list autopad--h">
+                        <div class="pubs-nav__item">
+                            <a href="/en/ebooks?key=title&amp;value=newtitle" class="pubs-nav__link" target="_self" tabindex="-1">Books</a>
+                        </div>
+                                <div class="pubs-nav__item pubs-nav__indent">
+                                        <a target="_self" href="/en/ebooks?key=title&amp;value=newtitle" class="pubs-nav__link" tabindex="-1">New Titles</a>
+                                </div>
+                                <div class="pubs-nav__item pubs-nav__indent">
+                                        <a target="_self" href="/en/ebooks?key=title&amp;value=all" class="pubs-nav__link" tabindex="-1">All</a>
+                                </div>
+                                <div class="pubs-nav__item pubs-nav__indent">
+                                        <a target="_blank" href="http://pubs.rsc.org/bookshop/" class="pubs-nav__link" tabindex="-1">Bookshop</a>
+                                </div>
+                                <div class="pubs-nav__item pubs-nav__indent">
+                                        <a target="_self" href="/en/pickandchoose/login" class="pubs-nav__link" tabindex="-1">Pick and Choose</a>
+                                </div>
+
+                    </div>
+                    <div class="pubs-nav__list autopad--h">
+                        <div class="pubs-nav__item">
+                            <a href="https://www.rsc.org/journals-books-databases/databases-literature-updates/" class="pubs-nav__link" target="_blank" tabindex="-1">Databases</a>
+                        </div>
+                                <div class="pubs-nav__item pubs-nav__indent">
+                                        <a target="_blank" href="https://www.rsc.org/journals-books-databases/databases-literature-updates/" class="pubs-nav__link" tabindex="-1">Literature Updates</a>
+                                </div>
+                                <div class="pubs-nav__item pubs-nav__indent">
+                                        <a target="_blank" href="http://www.chemspider.com/" class="pubs-nav__link" tabindex="-1">ChemSpider</a>
+                                </div>
+                                <div class="pubs-nav__item pubs-nav__indent">
+                                        <a target="_blank" href="https://www.rsc.org/merck-index" class="pubs-nav__link" tabindex="-1">The Merck Index*</a>
+                                </div>
+                                <div class="pubs-nav__item pubs-nav__indent">
+                                        <a target="_blank" href="http://pubs.rsc.org/marinlit/" class="pubs-nav__link" tabindex="-1">MarinLit</a>
+                                </div>
+
+                    </div>
+                    <div class="pubs-nav__list autopad--h">
+                        <div class="pubs-nav__item">
+                            <a href="#" class="pubs-nav__link" target="_self" tabindex="-1">More</a>
+                        </div>
+                                <div class="pubs-nav__item pubs-nav__indent">
+                                        <a target="_blank" href="https://www.rsc.org/resources-tools/research-tools/#access" class="pubs-nav__link" tabindex="-1">For Members</a>
+                                </div>
+                                <div class="pubs-nav__item pubs-nav__indent">
+                                        <a target="_self" href="/en/librarian/home" class="pubs-nav__link" tabindex="-1">For Librarians</a>
+                                </div>
+                                <div class="pubs-nav__item pubs-nav__indent">
+                                        <a target="_blank" href="https://www.rsc.org/Publishing/Journals/forms/V5profile.asp" class="pubs-nav__link" tabindex="-1">Subscribe</a>
+                                </div>
+                                <div class="pubs-nav__item pubs-nav__indent">
+                                        <a target="_self" href="/en/ealerts/rssfeed" class="pubs-nav__link" tabindex="-1">RSS Feeds</a>
+                                </div>
+                                <div class="pubs-nav__item pubs-nav__indent">
+                                        <a target="_blank" href="http://blogs.rsc.org/" class="pubs-nav__link" tabindex="-1">Blogs</a>
+                                </div>
+                                <div class="pubs-nav__item pubs-nav__indent">
+                                        <a target="_blank" href="https://www.chemistryworld.com/" class="pubs-nav__link" tabindex="-1">Chemistry World</a>
+                                </div>
+                                <div class="pubs-nav__item pubs-nav__indent">
+                                        <a target="_blank" href="https://edu.rsc.org/eic" class="pubs-nav__link" tabindex="-1">Education in Chemistry</a>
+                                </div>
+                                <div class="pubs-nav__item pubs-nav__indent">
+                                        <a target="_blank" href="https://www.rsc.org/journals-books-databases/open-access/" class="pubs-nav__link" tabindex="-1">Open Access</a>
+                                </div>
+                                <div class="pubs-nav__item pubs-nav__indent">
+                                        <a target="_blank" href="http://pubs.rsc.org/historical-collection" class="pubs-nav__link" tabindex="-1">Historical Collection</a>
+                                </div>
+
+                    </div>
+
+        </div>
+    </nav>
+</div>
+
+
+    <div class="auth-header" data-id="pnlAuthHeader">
+        <div data-id="pnlSignIn"></div>
+        <div class="viewport">
+            <div class="auth-header__institute-access">
+                <div class="auth-header__institute-messaging">
+                    <span id="divWelcomeUser"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <div class="pubs-ui oxy-ui" style="background-color: #FFF;" id="divPlatform">
+            <div class="viewport fixpad--m">
+                    <div class="site-msg-wrapper">
+                        <div class="site-msg-title autopad--h fixpadv--m">
+                            
+            <img src="https://www.rsc-cdn.org/oxygen/v2/images/themes/light/icons/info-o.png" alt="" width="24" class="ver-t">
+            Access to RSC content
+        
+                            <a href="#" class="site-msg-close close-notification-msg" data-val="D04DDA36EA0497490AA797E546E792F30CF0D202EEB758F973B8A9C7973FCF0D" id="btnSiteMsgClose"><img src="https://www.rsc-cdn.org/oxygen/assets/icons/cross-light.png" alt="Close the message box" width="24"></a>
+                        </div>
+                            <div class="site-msg-message autopad--h fixpadv--m">
+			<p>Continue to access RSC content when you are not at your institution. Follow our <a href="https://www.rsc.org/covid-19-response/publishing-remote-access/">step-by-step guide</a>.</p>
+        </div>
+                    </div>
+            </div>
+        </div>
+
+
+
+    
+
+    <noscript>
+        <div class="viewport autopad--h fixpadb--m">
+            <div class="plate plate--warning">
+                You do not have JavaScript enabled. Please enable JavaScript
+                to access the full features of the site or access our
+                <a href="/en/home/nonjavascriptversion">non-JavaScript page</a>.
+            </div>
+        </div>
+    </noscript>
+
+    <div id="maincontent">
+        
+
+
+
+
+<script async="async" src="https://www.googletagservices.com/tag/js/gpt.js"></script>
+<script>
+    var googletag = googletag || {};
+    googletag.cmd = googletag.cmd || [];
+</script>
+<script>
+    googletag.cmd.push(function () {
+        googletag.defineSlot('/97414310/pubs_journal_ta_mpu_1', [300, 250], 'div-dfp-ad-1').addService(googletag.pubads());
+        googletag.defineSlot('/97414310/pubs_journal_ta_mpu_2', [300, 250], 'div-dfp-ad-2').addService(googletag.pubads());
+        googletag.defineSlot('/97414310/pubs_journal_ta_mpu_3', [300, 250], 'div-dfp-ad-3').addService(googletag.pubads());
+        googletag.pubads().enableSingleRequest();
+        googletag.enableServices();
+    });
+</script>
+
+
+
+
+
+<input type="hidden" id="clicked_GetPatents" value="false" />
+<input id="pageNumberTab" type="hidden" />
+<input id="CitedByPN" type="hidden" />
+
+<br>
+<div class="viewport">
+
+    <div class="layout-control">
+        <div class="layout__panel layout__panel--primary layout__panel--60 layout__panel--filled">
+            <section class="layout__content layout__content--padded">
+
+                <div class="article-nav">
+
+                        <div class="article-nav__issue autopad--h">
+                            <a href="/en/journals/journal/ta?issueid=ta001045&amp;type=current&amp;issnprint=2050-7488" aria-label="From Issue Issue 45, 2013. Click to view all articles in this issue." title="Issue 45, 2013">Issue 45, 2013</a>
+                        </div>
+
+                        <div class="article-nav__bar">
+                            <a href="/en/Content/ArticleLanding/TA/2013/C3TA12927F">Previous <span class="v-mobile-hide--inline">Article</span></a>
+                            <a href="/en/Content/ArticleLanding/TA/2013/C3TA12229H">Next <span class="v-mobile-hide--inline">Article</span></a>
+                        </div>
+
+                    <div class="list-control">
+                        <ul class="list__collection--image">
+                            <li class="list__item">
+                                <a href="/en/journals/journal/ta" class="list__item-link">
+                                    <span class="list__image-col">
+                                        <img src="/en/Image/Get?imageInfo.ImageType=CoverIssue&amp;imageInfo.ImageIdentifier.SerCode=TA&amp;imageInfo.ImageIdentifier.IssueId=TA001045" id="imgLoader" title="Journal cover: Journal of Materials Chemistry A" alt="" class="list__item-img" height="88">
+                                    </span>
+                                    <span class="list__text-col">
+                                        <span class="list__item-label">
+                                            <span class="page-head__context">From the journal:</span>
+                                            <h3 class="h--heading3 no-heading">Journal of Materials Chemistry A</h3>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <br>
+                </div>
+
+                <article class="article-control">
+                    <div class="article__title">
+                        <h2 class="capsule__title fixpadv--m">
+
+Aminothermal synthesis of CHA-type SAPO molecular sieves and their catalytic performance in methanol to olefins (MTO) reaction<a href="#fn1" title="Electronic supplementary information (ESI) available. See DOI: 10.1039/c3ta12829f">&#8224;</a>                                                    </h2>
+
+                    </div>
+                        <div class="article__authors">
+        <span class="article__author-link">
+<a href="/en/results?searchtext=Author%3ADong%20Fan">Dong
+Fan</a>,<span><sup><i>abc</i></sup></span>
+&nbsp;
+        </span>
+        <span class="article__author-link">
+<a href="/en/results?searchtext=Author%3APeng%20Tian">Peng
+Tian</a>,<span><sup><i>ab</i></sup></span>
+&nbsp;
+        </span>
+        <span class="article__author-link">
+<a href="/en/results?searchtext=Author%3AXiong%20Su">Xiong
+Su</a>,<span><sup><i>abc</i></sup></span>
+&nbsp;
+        </span>
+        <span class="article__author-link">
+<a href="/en/results?searchtext=Author%3AYangyang%20Yuan">Yangyang
+Yuan</a>,<span><sup><i>abc</i></sup></span>
+&nbsp;
+        </span>
+        <span class="article__author-link">
+<a href="/en/results?searchtext=Author%3ADehua%20Wang">Dehua
+Wang</a>,<span><sup><i>abc</i></sup></span>
+&nbsp;
+        </span>
+        <span class="article__author-link">
+<a href="/en/results?searchtext=Author%3AChan%20Wang">Chan
+Wang</a>,<span><sup><i>abc</i></sup></span>
+&nbsp;
+        </span>
+        <span class="article__author-link">
+<a href="/en/results?searchtext=Author%3AMiao%20Yang">Miao
+Yang</a>,<span><sup><i>ab</i></sup></span>
+&nbsp;
+        </span>
+        <span class="article__author-link">
+<a href="/en/results?searchtext=Author%3ALinying%20Wang">Linying
+Wang</a>,<span><sup><i>ab</i></sup></span>
+&nbsp;
+        </span>
+        <span class="article__author-link">
+<a href="/en/results?searchtext=Author%3AShutao%20Xu">Shutao
+Xu</a><span><sup><i>ab</i></sup></span>
+&nbsp;and&nbsp;
+        </span>
+        <span class="article__author-link">
+<a href="/en/results?searchtext=Author%3AZhongmin%20Liu">Zhongmin
+Liu</a>*<span><sup><i>ab</i></sup></span>
+&nbsp;
+        </span>
+
+                        </div>
+                        <div class="drawer-control fixpadv--m">
+        <a href="#" class="drawer__handle">
+            <span class="drawer__icon"></span> Author affiliations
+        </a>
+        <div class="drawer__content">
+            <div>
+                    <p class="article__author-affiliation">
+                        <span>
+*                        </span>
+
+                        <span>
+                            Corresponding authors
+
+                                                                                                            </span>
+                    </p>
+                    <p class="article__author-affiliation">
+                        <span>
+                                <sup>a</sup>
+                        </span>
+
+                        <span>
+                            Dalian National Laboratory for Clean Energy, Dalian Institute of Chemical Physics, Chinese Academy of Sciences, Dalian, P. R. China
+
+                                <br />
+                                <b>E-mail:</b>
+                                    <a href="mailto:liuzm@dicp.ac.cn" title="liuzm@dicp.ac.cn">liuzm@dicp.ac.cn</a>                                                                                                            </span>
+                    </p>
+                    <p class="article__author-affiliation">
+                        <span>
+                                <sup>b</sup>
+                        </span>
+
+                        <span>
+                            National Engineering Laboratory for Methanol to Olens, Dalian Institute of Chemical Physics, Chinese Academy of Sciences, Dalian, P. R. China
+
+                                                                                                            </span>
+                    </p>
+                    <p class="article__author-affiliation">
+                        <span>
+                                <sup>c</sup>
+                        </span>
+
+                        <span>
+                            University of Chinese Academy of Sciences, Beijing, P. R. China
+
+                                                                                                            </span>
+                    </p>
+            </div>
+        </div>
+    </div>
+
+                    <h3 class="h--heading3 article-abstract__heading">Abstract</h3>
+                    <div class="capsule__column-wrapper">
+
+
+        <div class="capsule__text">
+            <p xmlns="http://www.rsc.org/schema/rscart38">Aminothermal synthesis of SAPO molecular sieves, in which organic amines are used as both solvent and template, is explored based on a variety of amines. Di-iso-propylamine (DIPA) and <em>N</em>,<em>N</em>,<em>N</em>′,<em>N</em>′-tetramethylethylenediamine (TMEDA) are found to lead to the rapid crystallization of SAPO-34 with high solid yield. A solid yield of 96.2% could be acquired using the TMEDA system (200 °C, 12 h), which is the highest value ever reported for SAPO molecular sieves. SAPO-44 is obtained for the first time using the hexamethyleneimine (HMI) template. Detailed synthetic investigation shows that the silicon content in the initial gel has an important effect on the crystalline nature of the final products, and higher Si concentration favours the synthesis of pure SAPO-34 and SAPO-44. In addition, it is shown that the Si coordination environment in the samples is closely related to the choice of template. Among the three samples investigated, SAPO-34-DIPA has the lowest threshold of Si content for the formation of Si islands in the framework due to the smallest charge compensation centers occluded in its CHA cage. The catalytic performance of the synthesized samples is tested by the MTO reaction and a high olefin selectivity of 85.8% is obtained on SAPO-34 templated by DIPA.</p>
+        </div>
+            <div class="capsule__article-image fixpadv--s">
+                <img title="Graphical abstract" alt="Graphical abstract: Aminothermal synthesis of CHA-type SAPO molecular sieves and their catalytic performance in methanol to olefins (MTO) reaction"
+                     src="/en/Image/Get?imageInfo.ImageType=GA&amp;imageInfo.ImageIdentifier.ManuscriptID=C3TA12829F&amp;imageInfo.ImageIdentifier.Year=2013" />
+            </div>
+
+                    </div>
+                    <p></p>
+
+
+
+
+                    <div id="pnlArticleAccess" class="article-access fixpadt--xxl" style="display: none; border: 0;">
+                        <div class="article-access__inner" style="background-color: #F1F1F3;">
+                            <div class="article-access__head fixpad--s">
+                                You have access to this article
+                            </div>
+                            <div class="fixpad--xl">
+                                <div id="pnlViewFullArticleButton" class="paywall__body text--centered">
+                                    <div id="pnlArticleLoading">
+                                        <span id="thtmlLoadingMessage">
+                                            <img src="https://www.rsc-cdn.org/pubs-core/2020.0.92/content/NewImages/Ajax-GA-Loader.gif" alt="" class="ver-m" />
+                                            Please wait while we load your content...
+                                        </span>
+                                        <span id="thtmlErrorMessage" style="display: none;">
+                                            Something went wrong. <a href="#" id="btnTryAgain">Try again?</a>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="pnlArticleContent" class="t-html"></div>
+
+                </article>
+
+            </section>
+
+        </div>
+        <div class="layout__panel layout__panel--secondary layout__panel--40 layout__panel--filled">
+
+            <section class="layout__content">
+
+                <input id="contentType" name="contentType" type="hidden" value="" />
+
+                <div class="tab-control">
+
+                    <nav class="tab__nav" role="tablist">
+                        <div class="tab__item"><a href="#pnlAbstract" class="tab__btn selected" id="btnAbstract" aria-selected="true" aria-label="About tab: More information about this article including download and purchase options.">About</a></div>
+                        <div class="tab__item"><a href="#pnlCitation" class="tab__btn" id="btnCitation" aria-selected="false" aria-label="Cited by tab: A list of other articles that have cited this article.">Cited by</a></div>
+                            <div class="tab__item"><a href="#pnlRelatedContent" class="tab__btn" id="btnRelatedContent" aria-selected="false" aria-label="Related tab: A list of related articles.">Related</a></div>
+                    </nav>
+
+                    
+                    <div class="tab__panel open" id="pnlAbstract" aria-hidden="false" aria-labelledby="btnAbstract" data-loaded="false">
+                        <div class="fixpadv--m">
+                            <a href="#btnAbstract" class="acc__link" aria-label="You are in the 'About' tab: Press Enter to return to tab navigation.">Back to tab navigation</a>
+
+                            <div id="divAbout">
+                                    <div id="DownloadOption" class="autopad--h fixpadv--l" style="min-height: 150px;">
+                                        <div class="text--centered">
+                                            <a href="#" class="btn btn--cta btn--disabled btn--block btn--stack btn-icon btn-icon--loading">
+                                                Download options <span class="btn-info">Please wait...</span>
+                                            </a>
+                                        </div>
+                                    </div>
+
+
+                                    <h2 class="autopad--h h--heading3">Supplementary files</h2>
+<div class="list-control">
+    <ul class="list__collection">
+            <li class="list__item--dashed">
+                <a href="http://www.rsc.org/suppdata/ta/c3/c3ta12829f/c3ta12829f.pdf" class="list__item-link" target="_blank">
+                    <span class="list__item-label">
+                        Supplementary information
+                        <span class="list__item-additional"> PDF (330K)</span>
+                    </span>
+                </a>
+            </li>
+    </ul>
+</div>
+
+
+
+
+<div class="autopad--h">
+
+    <h2 class="h--heading3">Article information</h2>
+    
+        <div>
+            <a class="doi-link text--small" title="Link to landing page via DOI" href="https://doi.org/10.1039/C3TA12829F">https://doi.org/10.1039/C3TA12829F</a>
+        </div>
+
+        <hr>
+            <div class="c fixpadt--l">
+                <div class="c__10"><strong>Submitted</strong></div>
+                <div class="c__14">22 Jul 2013</div>
+            </div>
+            <div class="c fixpadt--l">
+                <div class="c__10"><strong>Accepted</strong></div>
+                <div class="c__14">18 Sep 2013</div>
+            </div>
+            <div class="c fixpadt--l">
+                <div class="c__10"><strong>First published</strong></div>
+                <div class="c__14">18 Sep 2013</div>
+            </div>
+    
+    <div class="c fixpadt--l">
+        <hr>
+    </div>
+
+
+        <div class="c fixpadt--l">
+            <div class="c__10">
+                <label for="ResultAbstractFormat"><strong><span class="sr-only">Download</span> Citation</strong></label>
+            </div>
+            <div class="c__14">
+                <i><strong>J. Mater. Chem. A</strong></i>, 2013,<span style='padding-right:2px'></span><strong>1</strong>, 14206-14213
+                <br>
+<form action="/en/content/getformatedresult/c3ta12829f?downloadtype=article" method="post">                    <div class="select-basic">
+                        <span>
+                            <select class="select-field" id="ResultAbstractFormat" name="ResultAbstractFormat"><option>BibTex</option>
+<option>EndNote</option>
+<option>MEDLINE</option>
+<option>ProCite</option>
+<option>ReferenceManager</option>
+<option>RefWorks</option>
+<option>RIS</option>
+</select>
+                        </span>
+                        <span>
+                                <input type="submit" name="go" id="Submit1" value="Go" class="btn btn--tiny" onclick="gaTrack()"/>
+                        </span>
+                    </div>
+</form>            </div>
+        </div>
+
+    <div class="c fixpadt--l">
+        <div class="c__10"><strong>Article type</strong></div>
+        <div class="c__14">Paper</div>
+    </div>
+
+
+<div class="alp-request-permissions" style="display: block;">
+
+    <div class="c fixpadt--l">
+        <div class="c__10"><strong>Permissions</strong></div>
+        <div class="c__14">
+            
+            <a class="alp-request-permissions__open-btn" id="requestPermission"
+               rel="license" href="#" target="_blank" aria-label="Request permissions: Click to open.">
+                Request permissions
+            </a>
+        </div>
+    </div>
+
+    
+    <div class="alp-request-permissions__content scrollbar--slim">
+
+        <a href="#" class="alp-request-permissions__close-btn btn__enter-popup"
+           aria-label="You are in the 'Request permissions' pop up window. Click enter to close, or tab to continue.">
+            <img src="https://www.rsc-cdn.org/oxygen/assets/icons/cross.png" class="icon" width="24" alt="">
+        </a>
+
+        <h3 class="h--heading3">
+            Aminothermal synthesis of CHA-type SAPO molecular sieves and their catalytic performance in methanol to olefins (MTO) reaction
+        </h3>
+
+        <div>
+
+ D. Fan, P. Tian, X. Su, Y. Yuan, D. Wang, C. Wang, M. Yang, L. Wang, S. Xu and Z. Liu,
+            <i>J. Mater. Chem. A</i>, 2013,&nbsp;<strong>1</strong>, 14206
+
+                <div>
+                    <strong>DOI: </strong> 10.1039/C3TA12829F
+                </div>
+
+        </div>
+
+<div class="popup_mid_content">
+    <p class="padT10L0">
+        If you are not the author of this article and you wish to reproduce material from
+        it in a third party non-RSC publication you must <a href="http://www.copyright.com/openurl.do?issn=2050-7496&amp;amp;WT.mc.id=Royal%20Society%20of%20Chemistry">
+            formally request permission</a> using Copyright Clearance Center.
+        Go to our <a href="https://www.rsc.org/AboutUs/Copyright/instructions-for-using-RightsLink.asp" id="rightsLinkInstruction" class="request_new_popup">
+            Instructions for using Copyright Clearance Center page</a> for details.
+    </p>
+    <p class="padB10">
+        Authors contributing to RSC publications (journal articles, books or book chapters)
+        do not need to formally request permission to reproduce material contained in this
+        article provided that the correct acknowledgement is given with the reproduced material.
+    </p>
+    <p class="padB10">
+        Reproduced material should be attributed as follows:
+    </p>
+    <div class="req_popup">
+        <ul>
+            <li>
+                For reproduction of material from NJC:
+                <br />
+                Reproduced from Ref. XX with permission from the Centre National de la Recherche
+                Scientifique (CNRS) and The Royal Society of Chemistry.
+            </li>
+            <li>
+                For reproduction of material from PCCP:
+                <br />
+                Reproduced from Ref. XX with permission from the PCCP Owner Societies.
+            </li>
+            <li>
+                For reproduction of material from PPS:
+                <br />
+                Reproduced from Ref. XX with permission from the European Society for Photobiology,
+                the European Photochemistry Association, and The Royal Society of Chemistry.
+            </li>
+            <li>
+                For reproduction of material from all other RSC journals and books:
+                <br />
+                Reproduced from Ref. XX with permission from The Royal Society of Chemistry.
+
+            </li>
+        </ul>
+    </div>
+    <p class="padB10">
+        If the material has been adapted instead of reproduced from the original RSC publication
+        "Reproduced from" can be substituted with "Adapted from".
+    </p>
+    <p class="padB10">
+        In all cases the Ref. XX is the XXth reference in the list of references.
+    </p>
+    <p class="padB10">
+        If you are the author of this article you do not need to formally request permission
+        to reproduce figures, diagrams etc. contained in this article in third party publications
+        or in a thesis or dissertation provided that the correct acknowledgement is given
+        with the reproduced material.
+    </p>
+    <p class="padB10">
+        Reproduced material should be attributed as follows:
+    </p>
+    <div class="req_popup">
+        <ul>
+            <li>
+                For reproduction of material from NJC:
+                <br />
+                [Original citation] - Reproduced by permission of The Royal Society of Chemistry (RSC) on behalf of the
+                Centre National de la Recherche Scientifique (CNRS) and the RSC
+            </li>
+            <li>
+                For reproduction of material from PCCP:
+                <br />
+                [Original citation] - Reproduced by permission of the PCCP Owner Societies
+            </li>
+            <li>
+                For reproduction of material from PPS:
+                <br />
+                [Original citation] - Reproduced by permission of The Royal Society of Chemistry (RSC) on behalf of the
+                European Society for Photobiology, the European Photochemistry Association, and
+                RSC
+            </li>
+            <li>
+                For reproduction of material from all other RSC journals:
+                <br />
+                [Original citation] - Reproduced by permission of The Royal Society of Chemistry
+            </li>
+        </ul>
+    </div>
+    <p class="padB10">
+        If you are the author of this article you still need to obtain permission to reproduce
+        the whole article in a third party publication with the exception of reproduction
+        of the whole article in a thesis or dissertation.
+    </p>
+    <p class="padB10">
+        Information about reproducing material from RSC articles with different licences
+        is available on our <a href="https://www.rsc.org/AboutUs/Copyright/Permissionrequests.asp" id="PermissionRequest" class="request_new_popup">Permission Requests page</a>.
+    </p>
+</div>
+
+        <a href="#" class="alp-request-permissions__close-btn btn__exit-popup" aria-label="You are at the end of the 'Request permissions' pop up window. Click enter to close, or tab to continue."><img src="https://www.rsc-cdn.org/oxygen/assets/icons/cross.png" class="icon" width="24" alt=""></a>
+
+    </div>
+    
+</div>    
+    
+    <div class="c fixpadt--l">
+        <hr>
+    </div>
+    
+        <script>
+            function downloadJSAtOnload() {
+                var element = document.createElement("script");
+                element.src = "https://d1bxh8uas1mnw7.cloudfront.net/assets/altmetric_badges-8f271adb184c21cc5169a7f67f7fe5ab.js";
+                element.id = "altmetric-embed-js";
+                document.body.appendChild(element);
+            }
+            if (window.addEventListener) {
+                window.addEventListener("load", downloadJSAtOnload, false);
+            }
+            else if (window.attachEvent) {
+                window.attachEvent("onload", downloadJSAtOnload);
+            }
+            else {
+                window.onload = downloadJSAtOnload;
+            }
+        </script>
+        <div class="c fixpadv--l">
+            <div class="c__10"><strong>Social activity</strong></div>
+            <div class="c__14"><div data-badge-type="2" data-doi="10.1039/C3TA12829F" data-condensed="true" class="altmetric-embed"></div></div>
+        </div>
+<div class="c c--gap-xs fixpadb--xl">
+    <div class="c__12 c--fixed">
+        <a class="btn btn--small btn--block btn--social btn--twitter"
+            href="https://twitter.com/intent/tweet/?text=Aminothermal+synthesis+of+CHA-type+SAPO+molecular+sieves+and+their+catalytic+performance+in+methanol+to+olefins+(MTO)+reaction+-+now+published+in+Journal+of+Materials+Chemistry+A&url=https%3a%2f%2fpubs.rsc.org%2fen%2fcontent%2farticlelanding%2f2013%2fta%2fc3ta12829f"
+            target="_blank">
+            <img src="https://www.rsc-cdn.org/pubs-core/2020.0.92/content/NewImages/twitter.svg" alt="" />
+            <span class="ver-m">Tweet</span>
+        </a>
+    </div>
+    <div class="c__12 c--fixed">
+        <a class="btn btn--small btn--block btn--social btn--wechat"
+            href="/en/Image/GetQrCode?url=https%3A%2F%2Fpubs.rsc.org%2Fen%2Fcontent%2Farticlelanding%2F2013%2Fta%2Fc3ta12829f"
+            
+            target="_blank">
+            <img src="https://www.rsc-cdn.org/pubs-core/2020.0.92/content/NewImages/wechat.svg" alt="" />
+            <span class="ver-m">Share</span>
+        </a>
+    </div>
+</div>
+
+</div>
+
+
+
+<form action="/en/results/searchbyauthor" id="SearchByAuthor" method="post">    <div class="autopad">
+        <h2 class="h--heading3">Search articles by author</h2>
+        <div class="input-group">
+                <div class="input__checkbox">
+                    <input type="checkbox" id="1" givenname="Dong" familyname="Fan">
+                    <label for="1" class="input__label">Dong Fan</label>
+                </div>
+                <div class="input__checkbox">
+                    <input type="checkbox" id="2" givenname="Peng" familyname="Tian">
+                    <label for="2" class="input__label">Peng Tian</label>
+                </div>
+                <div class="input__checkbox">
+                    <input type="checkbox" id="3" givenname="Xiong" familyname="Su">
+                    <label for="3" class="input__label">Xiong Su</label>
+                </div>
+                <div class="input__checkbox">
+                    <input type="checkbox" id="4" givenname="Yangyang" familyname="Yuan">
+                    <label for="4" class="input__label">Yangyang Yuan</label>
+                </div>
+                <div class="input__checkbox">
+                    <input type="checkbox" id="5" givenname="Dehua" familyname="Wang">
+                    <label for="5" class="input__label">Dehua Wang</label>
+                </div>
+                <div class="input__checkbox">
+                    <input type="checkbox" id="6" givenname="Chan" familyname="Wang">
+                    <label for="6" class="input__label">Chan Wang</label>
+                </div>
+                <div class="input__checkbox">
+                    <input type="checkbox" id="7" givenname="Miao" familyname="Yang">
+                    <label for="7" class="input__label">Miao Yang</label>
+                </div>
+                <div class="input__checkbox">
+                    <input type="checkbox" id="8" givenname="Linying" familyname="Wang">
+                    <label for="8" class="input__label">Linying Wang</label>
+                </div>
+                <div class="input__checkbox">
+                    <input type="checkbox" id="9" givenname="Shutao" familyname="Xu">
+                    <label for="9" class="input__label">Shutao Xu</label>
+                </div>
+                <div class="input__checkbox">
+                    <input type="checkbox" id="10" givenname="Zhongmin" familyname="Liu">
+                    <label for="10" class="input__label">Zhongmin Liu</label>
+                </div>
+        </div>
+        <input type="submit" name="go" id="Search" value="Go" title="Go" class="btn btn--tiny">
+        <input id="DOI" name="DOI" type="hidden" value="C3TA12829F" />
+        <input id="selectedAuthors" name="selectedAuthors" type="hidden" value="" />
+    </div>
+</form>
+                                <input id="authors" name="authors" type="hidden" value="AAEAAAD/////AQAAAAAAAAAMAgAAAGJSU0NwdWJzLmVQbGF0Zm9ybS5TZXJ2aWNlLkRhdGFDb250cmFjdHMsIFZlcnNpb249MjAyMC4wLjkyLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49bnVsbAQBAAAAwgFTeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0YDFbW1JTQ3B1YnMuZVBsYXRmb3JtLlNlcnZpY2UuRGF0YUNvbnRyYWN0cy5TZWFyY2guQXV0aG9ySW5mbywgUlNDcHVicy5lUGxhdGZvcm0uU2VydmljZS5EYXRhQ29udHJhY3RzLCBWZXJzaW9uPTIwMjAuMC45Mi4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPW51bGxdXQMAAAAGX2l0ZW1zBV9zaXplCF92ZXJzaW9uBAAAO1JTQ3B1YnMuZVBsYXRmb3JtLlNlcnZpY2UuRGF0YUNvbnRyYWN0cy5TZWFyY2guQXV0aG9ySW5mb1tdAgAAAAgICQMAAAAKAAAACgAAAAcDAAAAAAEAAAAQAAAABDlSU0NwdWJzLmVQbGF0Zm9ybS5TZXJ2aWNlLkRhdGFDb250cmFjdHMuU2VhcmNoLkF1dGhvckluZm8CAAAACQQAAAAJBQAAAAkGAAAACQcAAAAJCAAAAAkJAAAACQoAAAAJCwAAAAkMAAAACQ0AAAANBgUEAAAAOVJTQ3B1YnMuZVBsYXRmb3JtLlNlcnZpY2UuRGF0YUNvbnRyYWN0cy5TZWFyY2guQXV0aG9ySW5mbw0AAAAaPEdpdmVuTmFtZT5rX19CYWNraW5nRmllbGQaPEZpcnN0TmFtZT5rX19CYWNraW5nRmllbGQbPEZhbWlseU5hbWU+a19fQmFja2luZ0ZpZWxkIjxHaXZlbk5hbWVOb01hcmt1cD5rX19CYWNraW5nRmllbGQiPEZpcnN0TmFtZU5vTWFya3VwPmtfX0JhY2tpbmdGaWVsZCM8RmFtaWx5TmFtZU5vTWFya3VwPmtfX0JhY2tpbmdGaWVsZBU8VHlwZT5rX19CYWNraW5nRmllbGQcPEZpcnN0QXV0aG9yPmtfX0JhY2tpbmdGaWVsZBw8QWZmaWxpYXRpb24+a19fQmFja2luZ0ZpZWxkIDxBZmZpbGlhdGlvbkluZm8+a19fQmFja2luZ0ZpZWxkFTxSb2xlPmtfX0JhY2tpbmdGaWVsZCE8QWZmaWxpYXRpb25Db2Rlcz5rX19CYWNraW5nRmllbGQePFF1YWxpZmllck5hbWU+a19fQmFja2luZ0ZpZWxkAQEBAQEBBAABAwEDATlSU0NwdWJzLmVQbGF0Zm9ybS5TZXJ2aWNlLkRhdGFDb250cmFjdHMuU2VhcmNoLkF1dGhvclR5cGUCAAAAAccBU3lzdGVtLkNvbGxlY3Rpb25zLkdlbmVyaWMuTGlzdGAxW1tSU0NwdWJzLmVQbGF0Zm9ybS5TZXJ2aWNlLkRhdGFDb250cmFjdHMuU2VhcmNoLkFmZmlsaWF0aW9uSW5mbywgUlNDcHVicy5lUGxhdGZvcm0uU2VydmljZS5EYXRhQ29udHJhY3RzLCBWZXJzaW9uPTIwMjAuMC45Mi4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPW51bGxdXX9TeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0YDFbW1N5c3RlbS5TdHJpbmcsIG1zY29ybGliLCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OV1dAgAAAAYOAAAABERvbmcJDgAAAAYPAAAAA0ZhbgYQAAAABERvbmcJEAAAAAYRAAAAA0ZhbgXu////OVJTQ3B1YnMuZVBsYXRmb3JtLlNlcnZpY2UuRGF0YUNvbnRyYWN0cy5TZWFyY2guQXV0aG9yVHlwZQEAAAAHdmFsdWVfXwAIAgAAAAAAAAABBhMAAAAOYWZmYSBhZmZiIGFmZmMJFAAAAAoJFQAAAAYWAAAAAAEFAAAABAAAAAYXAAAABFBlbmcJFwAAAAYYAAAABFRpYW4GGQAAAARQZW5nCRkAAAAGGgAAAARUaWFuAeX////u////AAAAAAAGHAAAAAlhZmZhIGFmZmIJHQAAAAoJHgAAAAkWAAAAAQYAAAAEAAAABiAAAAAFWGlvbmcJIAAAAAYhAAAAAlN1BiIAAAAFWGlvbmcJIgAAAAYjAAAAAlN1Adz////u////AAAAAAAGJQAAAA5hZmZhIGFmZmIgYWZmYwkmAAAACgknAAAACRYAAAABBwAAAAQAAAAGKQAAAAhZYW5neWFuZwkpAAAABioAAAAEWXVhbgYrAAAACFlhbmd5YW5nCSsAAAAGLAAAAARZdWFuAdP////u////AAAAAAAGLgAAAA5hZmZhIGFmZmIgYWZmYwkvAAAACgkwAAAACRYAAAABCAAAAAQAAAAGMgAAAAVEZWh1YQkyAAAABjMAAAAEV2FuZwY0AAAABURlaHVhCTQAAAAGNQAAAARXYW5nAcr////u////AAAAAAAGNwAAAA5hZmZhIGFmZmIgYWZmYwk4AAAACgk5AAAACRYAAAABCQAAAAQAAAAGOwAAAARDaGFuCTsAAAAGPAAAAARXYW5nBj0AAAAEQ2hhbgk9AAAABj4AAAAEV2FuZwHB////7v///wAAAAAABkAAAAAOYWZmYSBhZmZiIGFmZmMJQQAAAAoJQgAAAAkWAAAAAQoAAAAEAAAABkQAAAAETWlhbwlEAAAABkUAAAAEWWFuZwZGAAAABE1pYW8JRgAAAAZHAAAABFlhbmcBuP///+7///8AAAAAAAZJAAAACWFmZmEgYWZmYglKAAAACglLAAAACRYAAAABCwAAAAQAAAAGTQAAAAdMaW55aW5nCU0AAAAGTgAAAARXYW5nBk8AAAAHTGlueWluZwlPAAAABlAAAAAEV2FuZwGv////7v///wAAAAAABlIAAAAJYWZmYSBhZmZiCVMAAAAKCVQAAAAJFgAAAAEMAAAABAAAAAZWAAAABlNodXRhbwlWAAAABlcAAAACWHUGWAAAAAZTaHV0YW8JWAAAAAZZAAAAAlh1Aab////u////AAAAAAAGWwAAAAlhZmZhIGFmZmIJXAAAAAoJXQAAAAkWAAAAAQ0AAAAEAAAABl8AAAAIWmhvbmdtaW4JXwAAAAZgAAAAA0xpdQZhAAAACFpob25nbWluCWEAAAAGYgAAAANMaXUBnf///+7///8AAAAAAAZkAAAACWFmZmEgYWZmYgllAAAABmYAAAAGY29ycmVzCWcAAAAJFgAAAAQUAAAAxwFTeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0YDFbW1JTQ3B1YnMuZVBsYXRmb3JtLlNlcnZpY2UuRGF0YUNvbnRyYWN0cy5TZWFyY2guQWZmaWxpYXRpb25JbmZvLCBSU0NwdWJzLmVQbGF0Zm9ybS5TZXJ2aWNlLkRhdGFDb250cmFjdHMsIFZlcnNpb249MjAyMC4wLjkyLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49bnVsbF1dAwAAAAZfaXRlbXMFX3NpemUIX3ZlcnNpb24EAABAUlNDcHVicy5lUGxhdGZvcm0uU2VydmljZS5EYXRhQ29udHJhY3RzLlNlYXJjaC5BZmZpbGlhdGlvbkluZm9bXQIAAAAICAlpAAAAAwAAAAMAAAAEFQAAAH9TeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0YDFbW1N5c3RlbS5TdHJpbmcsIG1zY29ybGliLCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OV1dAwAAAAZfaXRlbXMFX3NpemUIX3ZlcnNpb24GAAAICAlqAAAAAwAAAAMAAAABHQAAABQAAAAJawAAAAIAAAACAAAAAR4AAAAVAAAACWwAAAACAAAAAgAAAAEmAAAAFAAAAAltAAAAAwAAAAMAAAABJwAAABUAAAAJbgAAAAMAAAADAAAAAS8AAAAUAAAACW8AAAADAAAAAwAAAAEwAAAAFQAAAAlwAAAAAwAAAAMAAAABOAAAABQAAAAJcQAAAAMAAAADAAAAATkAAAAVAAAACXIAAAADAAAAAwAAAAFBAAAAFAAAAAlzAAAAAwAAAAMAAAABQgAAABUAAAAJdAAAAAMAAAADAAAAAUoAAAAUAAAACXUAAAACAAAAAgAAAAFLAAAAFQAAAAl2AAAAAgAAAAIAAAABUwAAABQAAAAJdwAAAAIAAAACAAAAAVQAAAAVAAAACXgAAAACAAAAAgAAAAFcAAAAFAAAAAl5AAAAAgAAAAIAAAABXQAAABUAAAAJegAAAAIAAAACAAAAAWUAAAAUAAAACXsAAAACAAAAAgAAAAFnAAAAFQAAAAl8AAAAAwAAAAMAAAAHaQAAAAABAAAABAAAAAQ+UlNDcHVicy5lUGxhdGZvcm0uU2VydmljZS5EYXRhQ29udHJhY3RzLlNlYXJjaC5BZmZpbGlhdGlvbkluZm8CAAAACX0AAAAJfgAAAAl/AAAAChFqAAAABAAAAAaAAAAAAWEGgQAAAAFiBoIAAAABYwoHawAAAAABAAAABAAAAAQ+UlNDcHVicy5lUGxhdGZvcm0uU2VydmljZS5EYXRhQ29udHJhY3RzLlNlYXJjaC5BZmZpbGlhdGlvbkluZm8CAAAACX0AAAAJfgAAAA0CEWwAAAAEAAAABoUAAAABYQaGAAAAAWINAgdtAAAAAAEAAAAEAAAABD5SU0NwdWJzLmVQbGF0Zm9ybS5TZXJ2aWNlLkRhdGFDb250cmFjdHMuU2VhcmNoLkFmZmlsaWF0aW9uSW5mbwIAAAAJfQAAAAl+AAAACX8AAAAKEW4AAAAEAAAABooAAAABYQaLAAAAAWIGjAAAAAFjCgdvAAAAAAEAAAAEAAAABD5SU0NwdWJzLmVQbGF0Zm9ybS5TZXJ2aWNlLkRhdGFDb250cmFjdHMuU2VhcmNoLkFmZmlsaWF0aW9uSW5mbwIAAAAJfQAAAAl+AAAACX8AAAAKEXAAAAAEAAAABpAAAAABYQaRAAAAAWIGkgAAAAFjCgdxAAAAAAEAAAAEAAAABD5SU0NwdWJzLmVQbGF0Zm9ybS5TZXJ2aWNlLkRhdGFDb250cmFjdHMuU2VhcmNoLkFmZmlsaWF0aW9uSW5mbwIAAAAJfQAAAAl+AAAACX8AAAAKEXIAAAAEAAAABpYAAAABYQaXAAAAAWIGmAAAAAFjCgdzAAAAAAEAAAAEAAAABD5SU0NwdWJzLmVQbGF0Zm9ybS5TZXJ2aWNlLkRhdGFDb250cmFjdHMuU2VhcmNoLkFmZmlsaWF0aW9uSW5mbwIAAAAJfQAAAAl+AAAACX8AAAAKEXQAAAAEAAAABpwAAAABYQadAAAAAWIGngAAAAFjCgd1AAAAAAEAAAAEAAAABD5SU0NwdWJzLmVQbGF0Zm9ybS5TZXJ2aWNlLkRhdGFDb250cmFjdHMuU2VhcmNoLkFmZmlsaWF0aW9uSW5mbwIAAAAJfQAAAAl+AAAADQIRdgAAAAQAAAAGoQAAAAFhBqIAAAABYg0CB3cAAAAAAQAAAAQAAAAEPlJTQ3B1YnMuZVBsYXRmb3JtLlNlcnZpY2UuRGF0YUNvbnRyYWN0cy5TZWFyY2guQWZmaWxpYXRpb25JbmZvAgAAAAl9AAAACX4AAAANAhF4AAAABAAAAAalAAAAAWEGpgAAAAFiDQIHeQAAAAABAAAABAAAAAQ+UlNDcHVicy5lUGxhdGZvcm0uU2VydmljZS5EYXRhQ29udHJhY3RzLlNlYXJjaC5BZmZpbGlhdGlvbkluZm8CAAAACX0AAAAJfgAAAA0CEXoAAAAEAAAABqkAAAABYQaqAAAAAWINAgd7AAAAAAEAAAAEAAAABD5SU0NwdWJzLmVQbGF0Zm9ybS5TZXJ2aWNlLkRhdGFDb250cmFjdHMuU2VhcmNoLkFmZmlsaWF0aW9uSW5mbwIAAAAJfQAAAAl+AAAADQIRfAAAAAQAAAAGrQAAAAEqBq4AAAABYQavAAAAAWIKBX0AAAA+UlNDcHVicy5lUGxhdGZvcm0uU2VydmljZS5EYXRhQ29udHJhY3RzLlNlYXJjaC5BZmZpbGlhdGlvbkluZm8MAAAAHjxBZmZpbGlhdGlvbklkPmtfX0JhY2tpbmdGaWVsZCE8T3JnYW5pc2F0aW9uTmFtZT5rX19CYWNraW5nRmllbGQYPEFkZHJlc3M+a19fQmFja2luZ0ZpZWxkFTxDaXR5PmtfX0JhY2tpbmdGaWVsZBY8U3RhdGU+a19fQmFja2luZ0ZpZWxkGTxQb3N0Y29kZT5rX19CYWNraW5nRmllbGQYPENvdW50cnk+a19fQmFja2luZ0ZpZWxkFzxFbWFpbHM+a19fQmFja2luZ0ZpZWxkFDxGYXg+a19fQmFja2luZ0ZpZWxkFjxQaG9uZT5rX19CYWNraW5nRmllbGQUPFVybD5rX19CYWNraW5nRmllbGQgPE9yZ2FuaXphdGlvblVybD5rX19CYWNraW5nRmllbGQBAQEBAQEBAwEBAQN/U3lzdGVtLkNvbGxlY3Rpb25zLkdlbmVyaWMuTGlzdGAxW1tTeXN0ZW0uU3RyaW5nLCBtc2NvcmxpYiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODldXX9TeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0YDFbW1N5c3RlbS5TdHJpbmcsIG1zY29ybGliLCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OV1dAgAAAAawAAAAAWEGsQAAAG5EYWxpYW4gTmF0aW9uYWwgTGFib3JhdG9yeSBmb3IgQ2xlYW4gRW5lcmd5LCBEYWxpYW4gSW5zdGl0dXRlIG9mIENoZW1pY2FsIFBoeXNpY3MsIENoaW5lc2UgQWNhZGVteSBvZiBTY2llbmNlcwkWAAAABrMAAAAGRGFsaWFuCRYAAAAJFgAAAAa1AAAAC1AuIFIuIENoaW5hCbYAAAAJFgAAAAkWAAAACRYAAAAJuAAAAAF+AAAAfQAAAAa5AAAAAWIGugAAAHhOYXRpb25hbCBFbmdpbmVlcmluZyBMYWJvcmF0b3J5IGZvciBNZXRoYW5vbCB0byBPbGVucywgRGFsaWFuIEluc3RpdHV0ZSBvZiBDaGVtaWNhbCBQaHlzaWNzLCBDaGluZXNlIEFjYWRlbXkgb2YgU2NpZW5jZXMJFgAAAAa8AAAABkRhbGlhbgkWAAAACRYAAAAGvgAAAAtQLiBSLiBDaGluYQm/AAAACRYAAAAJFgAAAAkWAAAACcEAAAABfwAAAH0AAAAGwgAAAAFjBsMAAAApVW5pdmVyc2l0eSBvZiBDaGluZXNlIEFjYWRlbXkgb2YgU2NpZW5jZXMJFgAAAAbFAAAAB0JlaWppbmcJFgAAAAkWAAAABscAAAALUC4gUi4gQ2hpbmEJyAAAAAkWAAAACRYAAAAJFgAAAAnKAAAAAbYAAAAVAAAACcsAAAABAAAAAQAAAAG4AAAAFQAAAAnMAAAAAAAAAAAAAAABvwAAABUAAAAJzAAAAAAAAAAAAAAAAcEAAAAVAAAACcwAAAAAAAAAAAAAAAHIAAAAFQAAAAnMAAAAAAAAAAAAAAABygAAABUAAAAJzAAAAAAAAAAAAAAAEcsAAAAEAAAABs0AAAAQbGl1em1AZGljcC5hYy5jbg0DEcwAAAAAAAAACw==" />
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                    
+                    <div class="tab__panel" id="pnlCitation" aria-hidden="true" aria-labelledby="btnCitation" data-loaded="false">
+                        <div class="autopad--h fixpadv--m">
+                            <a href="#btnCitation" class="acc__link" aria-label="You are in the 'Cited by' tab: Press Enter to return to tab navigation.">Back to tab navigation</a>
+                                    <div id="divCitation">
+                                        <p>
+                                            <img src="https://www.rsc-cdn.org/pubs-core/2020.0.92/content/NewImages/Ajax-GA-Loader.gif" alt="" style="float:left" />
+                                            Fetching data from CrossRef.<br />
+                                            This may take some time to load.
+                                        </p>
+                                    </div>
+                        </div>
+                    </div>
+                    
+
+                    
+                        <div class="tab__panel" id="pnlRelatedContent" aria-hidden="true" aria-labelledby="btnRelatedContent" data-loaded="false">
+                            <div class="autopad--h fixpadv--m">
+                                <a href="#btnRelatedContent" class="acc__link" aria-label="You are in the 'Related' tab: Press Enter to return to tab navigation.">Back to tab navigation</a>
+                                <div id="divRelatedContent">
+                                    <p>
+                                        <img src="https://www.rsc-cdn.org/pubs-core/2020.0.92/content/NewImages/Ajax-GA-Loader.gif" alt="Loading related content" />
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+
+            </section>
+<section class="layout__content layout__content--padded text--centered">
+    <h3 class="h--heading4">Spotlight</h3>
+    <div id='div-dfp-ad-1' class="dfp-ad__slot--mpu">
+        <script>googletag.cmd.push(function() { googletag.display('div-dfp-ad-1'); });</script>
+    </div>
+    <h3 class="h--heading4">Advertisements</h3>
+    <div id='div-dfp-ad-2' class="dfp-ad__slot--mpu">
+        <script>googletag.cmd.push(function() { googletag.display('div-dfp-ad-2'); });</script>
+    </div>
+    <div id='div-dfp-ad-3' class="dfp-ad__slot--mpu">
+        <script>googletag.cmd.push(function() { googletag.display('div-dfp-ad-3'); });</script>
+    </div>
+</section>
+        </div>
+
+    </div>
+
+</div>
+
+
+    </div>
+
+    <div data-id="pnlGlobalFooter">
+        <div class="rsc-ui">
+            <!-- start oxygen footer -->
+            <footer class="rsc-footer">
+                <div class="breadcrumbs">
+                    <div class="viewport">
+                        <ul>
+                            <li class="extra"><a href="https://www.rsc.org">rsc.org</a></li>
+                            <li>
+                                <img src="https://www.rsc-cdn.org/pubs-core/2020.0.92/content/NewImages/chevron-right.png" width="8" height="8" alt="" />
+                                <a href="/" class="selected">Journals, books &amp; databases</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class='nav' id='pnlSiteMap'>
+                    <div class='viewport'>
+                        <div class='rsc-logo'>
+                            <img src="https://www.rsc-cdn.org/pubs-core/2020.0.92/content/NewImages/rsc-logo-rev-pubs.svg" alt="Royal Society of Chemistry homepage">
+                        </div>
+                        <div class='links'>
+                            <ul>
+                                <li><a href='https://www.rsc.org/'>Home</a></li>
+                                <li><a href='https://www.rsc.org/about-us/'>About us</a></li>
+                                <li><a href='https://www.rsc.org/membership-and-community/'>Membership &#38; professional community</a></li>
+                                <li><a href='https://www.rsc.org/campaigning-outreach/'>Campaigning &#38; outreach</a></li>
+                                <li><a href='https://www.rsc.org/journals-books-databases/'>Journals, books &#38; databases</a></li>
+                                <li><a href='https://www.rsc.org/teaching-and-learning/'>Teaching &#38; learning</a></li>
+                                <li><a href='https://www.rsc.org/news-events/'>News&#160;&#38; events</a></li>
+                                <li><a href='https://www.rsc.org/locations-contacts/'>Locations &#38; contacts</a></li>
+                                <li><a href='https://www.rsc.org/careers/'>Careers</a></li>
+                                <li><a href='https://www.rsc.org/awards-funding/'>Awards &#38; funding</a></li>
+                                <li><a href='https://www.rsc.org/advertise/'>Advertise</a></li>
+                                <li><a href='https://www.rsc.org/help-legal/'>Help &#38; legal</a></li>
+                                <li><a href='https://www.rsc.org/help-legal/'>Privacy policy</a></li>
+                                <li><a href='https://www.rsc.org/help-legal/'>Terms &#38; conditions</a></li>
+                            </ul>
+                        </div>
+                        <hr class='clear'>
+                    </div>
+                </div>
+                <div class='baseline'>
+                    <div class='viewport'>
+                        <div class='social-icons'>
+                            <a href='https://www.facebook.com/RoyalSocietyofChemistry' class='facebook'><span>Facebook</span><img src='https://www.rsc-cdn.org/pubs-core/2020.0.92/content/NewImages/facebook-128.png' height='32' width='32' alt=''></a>
+                            <a href='https://twitter.com/RoySocChem' class='twitter'><span>Twitter</span><img src='https://www.rsc-cdn.org/pubs-core/2020.0.92/content/NewImages/twitter-128.png' height='32' width='32' alt=''></a>
+                            <a href='https://www.linkedin.com/company/23105' class='linkedin'><span>LinkedIn</span><img src='https://www.rsc-cdn.org/pubs-core/2020.0.92/content/NewImages/linkedin-128.png' height='32' width='32' alt=''></a>
+                            <a href='https://www.youtube.com/user/wwwRSCorg' class='youtube'><span>Youtube</span><img src='https://www.rsc-cdn.org/pubs-core/2020.0.92/content/NewImages/youtube-128.png' height='32' width='32' alt=''></a>
+                        </div>
+                        <div class='copyright'>
+                            &#169; Royal Society of Chemistry 2020<br>Registered charity number: 207890
+                        </div>
+                    </div>
+                </div>
+                <hr class='clear'>
+            </footer>
+            <!-- end oxygen footer -->
+        </div>
+    </div>
+
+    <div class="modal__canvas modal__canvas--clickclose">
+    </div>
+
+    <script>
+        var eCommerceGetOrderItemCountUrl = 'https://www.rsc.org/basket/shoppingcart/getorderitemcount';
+        var hideNotificationMessageUrl = '/en/home/HideNotificationMessage';
+        var brandingBarUrl = '/en/home/branding_New';
+    </script>
+    <script src="https://www.rsc-cdn.org/pubs-core/2020.0.92/content/Scripts/dist/vendor.min.js"></script>
+    <script src="https://www.rsc-cdn.org/pubs-core/2020.0.92/content/Scripts/dist/pubs-ui.min.js"></script>
+    
+
+    <script>
+
+        var Model = {
+            IsEnableRelatedContentTab: true,
+            DownloadOptionAsync: '/en/content/checkaccess?msid=c3ta12829f&type=article&pubyear=2013&sercode=ta&publicationdate=2013-09-18&pubstatus=prt&doi=10.1039%2Fc3ta12829f&ispdfexist=True&title=aminothermal%20synthesis%20of%20cha-type%20sapo%20molecular%20sieves%20and%20their%20catalytic%20performance%20in%20methanol%20to%20olefins%20%28mto%29%20reaction&fulltext=xml&checkFullText=True&totalPages=8',
+            ArticleTitleFull: 'aminothermal synthesis of cha-type sapo molecular sieves and their catalytic performance in methanol to olefins (mto) reaction - c3ta12829f - sercode=ta'
+        };
+
+        var ALPTabs = {
+            "Abstract": {
+                hash: "divAbstract",
+                link: "#btnAbstract",
+                panel: "#pnlAbstract",
+                content: "#divAbout",
+                remoteUrl: "",
+                trackPageview: true,
+                trackingSuffix: "/abstract"
+            },
+            "Citation": {
+                hash: "divCitation",
+                link: "#btnCitation",
+                panel: "#pnlCitation",
+                content: "#divCitation",
+                remoteUrl: '/en/content/forwardlinks?doi=10.1039%2Fc3ta12829f',
+                trackPageview: true,
+                trackingSuffix: "/citedby"
+            },
+            "RelatedContent": {
+                hash: "divRelatedContent",
+                link: "#btnRelatedContent",
+                panel: "#pnlRelatedContent",
+                content: "#divRelatedContent",
+                remoteUrl: '/en/content/relatedarticleschapters/c3ta12829f?title=aminothermal%20synthesis%20of%20cha-type%20sapo%20molecular%20sieves%20and%20their%20catalytic%20performance%20in%20methanol%20to%20olefins%20%28mto%29%20reaction&journalname=Journal%20of%20Materials%20Chemistry%20A&doctype=Paper&journalthemesCount=0&authorscount=10',
+                trackPageview: true,
+                trackingSuffix: "/relatedcontent",
+                subTabs: {
+                    "articles": {
+                        radio: "articles",
+                        links: "#RelatedArticle",
+                        content: "#RelatedArticles",
+                        hasContent: "hasRelatedArticles"
+                    },
+                    "chapters": {
+                        radio: "chapters",
+                        links: "#RelatedBookChapter",
+                        content: "#RelatedBookChapters",
+                        hasContent: "hasRelatedBookChapters",
+                    },
+                    "themes": {
+                        radio: "themes",
+                        links: "",
+                        content: "#themeIssueNWebcollection",
+                        hasContent: "hasRelatedThemes"
+                    }
+                }
+            }
+        };
+
+        var CheckArticleHtmlButton = function CheckArticleHtmlButton() {
+
+            var ahtmlBtn = $("a[href*='/content/articlehtml']"),
+                ahtmlBtnText = $.trim(ahtmlBtn.text()),
+                ahtmlBtnHref;
+
+            if (ahtmlBtnText === "Article HTML") {
+                ahtmlBtnHref = ahtmlBtn.attr("href");
+                $("#pnlArticleAccess").show();
+                BindRetryButton(ahtmlBtnHref);
+                LoadArticleHtml(ahtmlBtnHref);
+            }
+
+        };
+
+        var LoadArticleHtml = function LoadArticleHtml(ahtmlUrl) {
+
+            $.ajax({
+                url: ahtmlUrl,
+                data: { t2: "y" },
+                success: function (data) {
+                    $("#pnlArticleAccess").remove();
+                    $("#pnlArticleContent").html(data);
+                    LazyLoadImages();
+                    StyleHeadings();
+                    StyleTables();
+                },
+                error: function () {
+                    $("#thtmlLoadingMessage").hide();
+                    $("#thtmlErrorMessage").show();
+                },
+                dataType: "html"
+            });
+
+        };
+
+        var BindRetryButton = function BindRetryButton(ahtmlUrl) {
+
+            $("#btnTryAgain").on("click", function (e) {
+                e.preventDefault();
+                $("#thtmlLoadingMessage").show();
+                $("#thtmlErrorMessage").hide();
+                LoadArticleHtml(ahtmlUrl);
+            });
+
+        };
+
+        var OpenPopupWindow = function OpenPopupWindow(url, width, height) {
+
+            var left = (screen.width / 2) - (width / 2),
+                top = (screen.height / 2) - (height / 2);
+            window.open(
+                url,
+                "",
+                "menubar=no,toolbar=no,resizable=yes,scrollbars=yes,width=" + width + ",height=" + height + ",top=" + top + ",left=" + left
+            );
+
+        }
+
+        var LazyLoadImages = function LazyLoadImages() {
+
+            $("img[data-original]").lazyload({
+                effect: "fadeIn",
+                threshold: 200
+            });
+
+        };
+
+        var StyleHeadings = function StyleHeadings() {
+
+            $(".t-html h5.h--heading5").each(function (idx, el) {
+                if ($(this).next().is("h6")) {
+                    $(this).css("display", "block").next().css("margin-top", "0");
+                }
+            });
+
+        };
+
+        var StyleTables = function StyleTables() {
+
+            $(".t-html table.table").each(function (idx, el) {
+                var tw = $(this).width();
+                $(this).parent().css("min-width", tw * 0.8 + "px");
+            });
+        };
+
+        var ShowALPTab = function ShowALPTab(tabName) {
+
+            if (ALPTabs.hasOwnProperty(tabName)) {
+
+                var tab = ALPTabs[tabName],
+                    tabPanel = $(tab.panel);
+
+                // Requires jQuery Address Plugin v1.5 (scripts/jquery.address-1.5.min.js)
+                $.address.value(tab.hash);
+
+                // If tab was not yet shown
+                if (tabPanel.attr("data-loaded") === "false") {
+
+                    if (tab.remoteUrl) {
+                        $(tab.content).load(tab.remoteUrl);
+                    }
+
+                    if (tab.trackPageview) {
+                        _gaq.push(['_trackPageview', window.location.pathname + tab.trackingSuffix]);
+                    }
+
+                    tabPanel.attr("data-loaded", "true");
+                }
+            }
+        };
+
+        
+        var gaTrack = function gaTrack() {
+            var citationType = "cit-" + $("#ResultAbstractFormat option:selected").val();
+            _gaq.push(['_trackEvent', 'citation', citationType, Model.ArticleTitleFull]);
+        }
+
+        $(document).ready(function () {
+
+            var currentHash = window.location.hash,
+                tabProps, subTabProps,
+                $contentType = $("#contentType");
+
+            // Requires jQuery Address Plugin v1.5 (scripts/jquery.address-1.5.min.js)
+            $.address.crawlable(true);
+            $.address.strict(false);
+
+            $(".btn-icon--loading").on("click", function (e) {
+                e.preventDefault();
+            });
+
+            $("#DownloadOption").load(Model.DownloadOptionAsync, CheckArticleHtmlButton);
+
+            // Bind all tabs
+            // Uses dblclick event on page load to prevent Oxygen.js from automatically placing focus
+            // into the corresponding tab panel, as that can force the page to scroll down
+            $(".tab__btn").on("click dblclick", function () {
+                ShowALPTab($(this).attr("id").substring(3));
+            });
+
+            // Bind social sharing buttons
+            $(".btn--social").on("click", function (e) {
+                e.preventDefault();
+                OpenPopupWindow($(this).attr("href"), 800, 600);
+            });
+
+            // Override the initial tab selection if the URL hash matches an available tab
+            for (tab in ALPTabs)
+            {
+                tabProps = ALPTabs[tab];
+                if (currentHash.indexOf(tabProps.hash) !== -1 && $(tabProps.link).length)
+                {
+                    $(tabProps.link).trigger("dblclick");
+                }
+            }
+
+            if (Model.IsEnableRelatedContentTab)
+            {
+                for (subTab in ALPTabs.RelatedContent.subTabs)
+                {
+                    subTabProps = ALPTabs.RelatedContent.subTabs[subTab];
+                    if (currentHash.indexOf(subTabProps.radio) !== -1)
+                    {
+                        $contentType.val(subTabProps.radio);
+                    }
+                }
+            }
+
+            // Otherwise default to first tab
+            if (!$(".tab__panel[data-loaded='true']").length)
+            {
+                $(".tab__btn").eq(0).trigger("dblclick");
+            }
+
+            // Crossmark 'Check for updates' button
+            if (!$("html").hasClass("ie8") && $(".crossmark-button").length) {
+                $.ajax({
+                    url: "https://crossmark-cdn.crossref.org/widget/v2.0/widget.js",
+                    dataType: "script",
+                    cache: true
+                }).done(function() {
+                    $(".crossmark-button").addClass("visible");
+                });
+            }
+
+            // Search articles by author form
+            $("#Search").click(function () {
+                var authorList = '';
+                var checkboxeschecked = '';
+
+                $('input[type=checkbox]').each(function () {
+                    if (this.checked) {
+                        checkboxeschecked = 'true';
+                        authorList = $(this).attr("givenName") + ":" + $(this).attr("familyName") + "|" + authorList;
+                    }
+                });
+                authorList = authorList.slice(0, authorList.length - 1);
+                $("#selectedAuthors").attr("value", authorList);
+
+                if (checkboxeschecked != 'true') {
+                    alert('Please select at least one author');
+                    return false;
+                }
+            });
+
+        });
+
+    </script>
+
+
+
+    <script>
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.setAttribute("defer", "defer");
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+
+</body>
+</html>
